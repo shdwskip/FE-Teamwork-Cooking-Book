@@ -7,33 +7,33 @@ body {
     overflow: hidden;
     /* padding-top: 70px; */
 }
-.buttons {
-    fill:#D8D9D8;
-}
-.buttons:hover {
-    fill: rgb(175, 173, 187);
-    /* width: 32px; */
-}
-
-.social-buttons {
+.social-container {
     float: right;
     padding-top: 1%;
     padding-right: 2%;
 }
 
-.social-buttons a {
+.social-container a {
     text-decoration: none;
     float: right;
     margin-right: 15px;
 }
 
-.side-menu {
-    padding-top: 1%;
-    padding-left: 3%;
-    /* background: url("../pictures/icons/menu_button.png") no-repeat center center fixed; */
+.buttons {
+    fill:#D8D9D8;
+}
+.buttons:hover {
+    fill: rgb(148, 145, 167);
+    /* fill: aquamarine; */
+    /* width: 32px; */
 }
 
-.side-menu a:hover {
+.meals-menu {
+    padding-top: 1%;
+    padding-left: 3%;
+}
+
+.meals-menu a:hover {
     /* background-color: #a7adba; */
     text-decoration: none;
 }
