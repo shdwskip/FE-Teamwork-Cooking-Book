@@ -165,7 +165,7 @@ footer p {
 
 .recipe-name, .ingredients-container, .description-container, .img-url, .category-select {
     margin-bottom: 10px;
-    width: 200px;
+    width: 100%;
 }
 
 .ingredients-container, textarea {
@@ -176,13 +176,6 @@ footer p {
     resize: none;
 }
 
-.img-url input {
-    margin-bottom: 10px;
-}
-
-.img-url img {
-    display: flex;
-}
 .save-close-recipe {
     padding-top: 10px;
 }
