@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/cssreset.css">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -86,15 +86,59 @@
     </div>
 
 
+    <button id="add-recipe" class="btn btn-default" type="button">Add recipe</button>
+    <div class="dialog">
+
+        <h2>Add Your Recipe</h2>
+        <div class="row">
+
+            <div class="col-xs-3 col-lg-6">
+
+                <select class="category-select form-control" required="required">
+                    <option id="default-category" selected="selected" disabled="disabled">Select Category</option>
+                    <option value="">Chicken</option>
+                    <option value="">Salads</option>
+                </select>
+
+
+                <div class="recipe-name">
+                    <h4>Recipe Name</h4>
+                    <input placeholder="Recipe Name" type="text" class="form-control" value="" required="required" pattern="" title="">
+                </div>
+
+                <div class="ingredients-container">
+                    <h4>Ingredients</h4>
+                    <textarea placeholder="Enter ingredients, separated by commas" class="form-control" rows="3" required="required"></textarea>
+                </div>
+
+                <div class="img-url">
+                    <h4>Picture</h4>
+                    <input type="text" id="meal-img-url" class="form-control" placeholder="URL of the meal" value="" required="required" pattern=""
+                        title="">
+                </div>
+
+                <div class="save-close-recipe">
+                    <button id="save-recipe" class="btn btn-success" type="button">Save</button>
+                    <button id="close-recipe-add" type="button" class="btn btn-danger">Close</button>
+                </div>
+            </div>
+
+            <div class="col-xs-3 col-lg-6">
+                <img id="preview" src="" width="100%" height="auto">
+            </div>
+
+        </div>
+    </div>
+
 
     <footer>
         <p>&#169 Dope Chefs</p>
     </footer>
 
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/add-recipe/add-recipe.js"></script>
 </body>
-
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </html>

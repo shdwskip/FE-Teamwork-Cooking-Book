@@ -117,7 +117,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -129,4 +129,48 @@ footer p {
     color: white;
     text-align: center;
     cursor: default;
+}
+
+/* Add recipe dialog box */
+
+.dialog {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    position: relative;
+    bottom: 200px;
+    height: 500px;
+    width: 500px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.dialog h2, h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.dialog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recipe-name, .ingredients-container, .img-url, .category-select {
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+.ingredients-container textarea {
+    resize: none;
+}
+.img-url input {
+    margin-bottom: 10px;
+}
+
+.img-url img {
+    display: flex;
+}
+.save-close-recipe {
+    padding-top: 10px;
 }
