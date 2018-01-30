@@ -46,7 +46,7 @@
 
             <div class="meals-menu col-xs-3">
 
-                <a href="#">
+                <a id="nav-overlay">
                     <svg class="menu-button" enable-background="new 0 0 24 24" height="80px" version="1.1" viewBox="0 0 24 24" width="80px" xml:space="preserve"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
@@ -58,7 +58,31 @@
                     </svg>
                 </a>
 
-                <div class="side-menu-container">
+                <div id="side-menu" class="sidenav">
+
+
+                    <div class="menu">
+
+
+                        <li>
+                            <a href="#">Meat</a>
+                        </li>
+                        <li>
+                            <a href="#">Fish</a>
+
+                        </li>
+                        <li>
+                            <a href="#">Vegan</a>
+                        </li>
+                        <li>
+                            <a href="#">Dessert</a>
+                        </li>
+
+                    </div>
+                    <div class="addRecipeBtn">
+                        <button class="but btn btn-success" type="button" id="add-recipe">ADD RECIPE</button>
+
+                    </div>
 
                 </div>
 
@@ -81,8 +105,6 @@
 
     </div>
 
-
-    <button id="add-recipe" class="btn btn-default" type="button">Add recipe</button>
     <div class="dialog">
 
         <h2>Add Your Recipe</h2>
@@ -123,7 +145,7 @@
                     <button id="save-recipe" class="btn btn-success" type="button">Save</button>
                     <button id="close-add-recipe" type="button" class="btn btn-danger">Close</button>
                 </div>
-                
+
             </div>
 
             <div class="col-xs-6 col-lg-6">
@@ -141,6 +163,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/side-menu.js"></script>
     <script src="js/save-recipe.js"></script>
     <script src="js/default-recipes.js"></script>
     <script src="js/add-recipe-box.js"></script>
