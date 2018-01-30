@@ -1,7 +1,9 @@
 ( function (scope) {
-    var $allRecipes = localStorage.getItem('allRecipes') ? localStorage.getItem('allRecipes') : [];
-
+    // debugger;
+    
     var saveRecipe = function ($category, $recipeName, $ingredients, $description, $imgURL) {
+        var $allRecipes = localStorage.getItem('allRecipes') ? localStorage.getItem('allRecipes') : [];
+
         var $recipe = {
             id: generateId(),
             category: $category,
@@ -23,8 +25,8 @@
         return '_' + Math.random().toString(36).substr(2, 9);
     }
     
-    scope.saveRecipe = saveRecipe;
-    //  scope.data = {
-    //      saveRecipe: saveRecipe
-    //  }
+     scope.recipeControl = {
+         saveRecipe,
+         generateId
+     }
 } )(window);

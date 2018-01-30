@@ -34,7 +34,7 @@
             return false;
         }
         
-        saveRecipe($category, $recipeName, $ingredients, $description, $imgURL);
+        recipeControl.saveRecipe($category, $recipeName, $ingredients, $description, $imgURL);
         $clearAllFields();
         alert('Success!');
         $( ".dialog" ).css( "display", "none" );
