@@ -17,17 +17,24 @@ body {
 .social-container a {
     text-decoration: none;
     float: right;
-    margin-right: 15px;
+    /* margin-right: 15px; */
 }
-
-.buttons {
+.menu-button {
     fill: #D8D9D8;
+    width: 10vmin;
 }
 
-.buttons:hover {
+.menu-button:hover {
+    fill: rgb(148, 145, 167);    
+}
+
+.social-buttons {
+    fill: #D8D9D8;
+    width: 5vmin;
+}
+
+.social-buttons:hover {
     fill: rgb(148, 145, 167);
-    /* fill: aquamarine; */
-    /* width: 32px; */
 }
 
 .meals-menu {
@@ -35,8 +42,7 @@ body {
     padding-left: 3%;
 }
 
-.meals-menu a:hover {
-    /* background-color: #a7adba; */
+.meals-menu a {
     text-decoration: none;
 }
 
@@ -47,7 +53,8 @@ body {
 
 .title-anchor {
     font-family: 'Dancing Script', cursive;
-    font-size: 120px;
+    font-size: 7vmax;
+    /* text-align: center; */
     color: #a7adba;
     letter-spacing: 3px;
 }
@@ -65,7 +72,7 @@ body {
 }
 
 .search-container {
-    display: flex;
+    /* display: flex; */
     margin: 0 auto;
     padding-top: 1.5%;
 }
@@ -117,7 +124,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     height: 60px;
@@ -129,4 +136,46 @@ footer p {
     color: white;
     text-align: center;
     cursor: default;
+}
+
+/* Add recipe dialog box */
+
+.dialog {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    position: relative;
+    bottom: 200px;
+    height: 600px;
+    width: 500px;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.dialog h2, h4 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.dialog h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.recipe-name, .ingredients-container, .description-container, .img-url, .category-select {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.ingredients-container, textarea {
+    resize: none;
+}
+
+.description-container textarea {
+    resize: none;
+}
+
+.save-close-recipe {
+    padding-top: 10px;
 }
