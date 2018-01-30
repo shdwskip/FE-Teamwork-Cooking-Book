@@ -144,8 +144,10 @@ footer p {
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
     margin: 0 auto;
-    position: relative;
-    bottom: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 600px;
     width: 500px;
     border-radius: 15px;
