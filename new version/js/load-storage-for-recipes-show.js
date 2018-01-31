@@ -35,7 +35,7 @@
         var allNutrition = null;
         if (recipe.nutrition)
         {
-          nutrition = recipe.nutrition.totalCarbs + " cal";
+          nutrition = recipe.nutrition.totalCalories + " cal";
           allNutrition = recipe.nutrition;  
         }
         
