@@ -14,6 +14,7 @@
         Roast in the preheated oven for 30 to 45 minutes, shaking pan every 5 to 7 minutes for even browning. Reduce heat when necessary to prevent burning. Brussels sprouts should be darkest brown, almost black, when done. Adjust seasoning with kosher salt, if necessary. Serve immediately.`,
         picture: 'http://images.media-allrecipes.com/userphotos/720x405/812447.jpg',
         nutrition: {
+            totalCalories: "90 kCal",
             fat: "54.6",
             saturatedFat: "5.8",
             cholesterol: "79",
@@ -25,7 +26,7 @@
         },
         servings: 3,
         time: '55min'
-       
+
     };
 
     var meatballsNirvana = {
@@ -43,6 +44,7 @@
         Bake in the preheated oven until no longer pink in the center, 20 to 25 minutes.`,
         picture: 'http://www.tastefulvoyages.com/uploads/8/1/9/8/81986800/24785610c75cdf1f5-62-1prince-meatballs-web-00010-edit_2_orig.jpg',
         nutrition: {
+            totalCalories: "384 kCal",
             fat: "34.6",
             saturatedFat: "6.8",
             cholesterol: "99",
@@ -71,6 +73,7 @@
         Gently place the seasoned tuna in the skillet and cook to desired doneness, 1 1/2 minutes per side for rare.`,
         picture: 'http://images.media-allrecipes.com/userphotos/720x405/762704.jpg',
         nutrition: {
+            totalCalories: "190 kCal",
             fat: "24.6",
             saturatedFat: "5.8",
             cholesterol: "79",
@@ -100,6 +103,7 @@
         If desired, dust the cake with powdered sugar.`,
         picture: 'http://images.media-allrecipes.com/userphotos/720x405/1130307.jpg',
         nutrition: {
+            totalCalories: "690 kCal",
             fat: "38.6",
             saturatedFat: "12.8",
             cholesterol: "79",
@@ -113,7 +117,11 @@
         time: '40min'
     };
 
-    var $defaultRecipes = [brusselsSprouts, meatballsNirvana, tunaSteaks, tooMuchChoco];
-    localStorage.setItem('allRecipes', JSON.stringify($defaultRecipes));
+    var $defaultRecipes = localStorage.getItem('allRecipes') ?
+    localStorage.getItem('allRecipes') : [brusselsSprouts, meatballsNirvana, tunaSteaks, tooMuchChoco];
+
+    if (typeof $defaultRecipes !== 'string') {
+        localStorage.setItem('allRecipes', JSON.stringify($defaultRecipes));
+    }
 
 })();
