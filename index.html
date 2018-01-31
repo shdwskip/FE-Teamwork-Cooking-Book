@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Work+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -63,19 +67,18 @@
 
                     <div class="menu">
 
+                        <li>
+                            <a id="showMeat">Meat</a>
+                        </li>
+                        <li>
+                            <a id="showFish">Fish</a>
 
-                        <li>
-                            <a href="#">Meat</a>
                         </li>
                         <li>
-                            <a href="#">Fish</a>
-
+                            <a id="showVegan">Vegan</a>
                         </li>
                         <li>
-                            <a href="#">Vegan</a>
-                        </li>
-                        <li>
-                            <a href="#">Dessert</a>
+                            <a id="showDessert">Dessert</a>
                         </li>
 
                     </div>
@@ -155,6 +158,64 @@
         </div>
     </div>
 
+    <div class="recipesShowModal container">
+        <h2>Menu list of all recipes with the chosen category</h2>
+        <div class="rowBackground row">
+            <div id = "recipeBox" class="outerBox"></div>
+        </div>
+    </div>
+
+
+    <div class="dialog">
+
+        <h2>Add Your Recipe</h2>
+        <div class="row">
+
+            <div class="col-xs-6 col-lg-6">
+
+                <select class="category-select form-control" required="required">
+                    <option id="default-category" selected="selected" disabled="disabled">Select Category</option>
+                    <option value="">Meat</option>
+                    <option value="">Fish</option>
+                    <option value="">Vegan</option>
+                    <option value="">Dessert</option>
+                </select>
+
+
+                <div class="recipe-name">
+                    <h4>Recipe Name</h4>
+                    <input placeholder="Recipe Name" type="text" class="form-control" value="" required="required" pattern="" title="">
+                </div>
+
+                <div class="ingredients-container">
+                    <h4>Ingredients</h4>
+                    <textarea placeholder="Enter ingredients, separated by commas" class="form-control" rows="3" required="required"></textarea>
+                </div>
+
+                <div class="description-container">
+                    <h4>Preparation</h4>
+                    <textarea placeholder="Describe preparation steps" class="form-control" rows="3" required="required"></textarea>
+                </div>
+
+                <div class="img-url">
+                    <h4>Picture</h4>
+                    <input type="text" id="meal-img-url" class="form-control" placeholder="URL of the meal" value="" required="required">
+                </div>
+
+                <div class="save-close-recipe">
+                    <button id="save-recipe" class="btn btn-success" type="button">Save</button>
+                    <button id="close-add-recipe" type="button" class="btn btn-danger">Close</button>
+                </div>
+
+            </div>
+
+            <div class="col-xs-6 col-lg-6">
+                <img id="preview" src="" width="100%" height="auto">
+            </div>
+
+        </div>
+    </div>
+
 
     <footer>
         <p>&#169 Dope Chefs</p>
@@ -167,6 +228,9 @@
     <script src="js/save-recipe.js"></script>
     <script src="js/default-recipes.js"></script>
     <script src="js/add-recipe-box.js"></script>
+
+    <script src="js/load-storage-for-recipes-show.js"></script>
+    
 </body>
 
 </html>
