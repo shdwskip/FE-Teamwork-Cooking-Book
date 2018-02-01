@@ -1,8 +1,9 @@
 /* eslint-disable*/
 
-(function(){
-  
-  var loadFromStorage = function(category){
+
+(function () {
+
+  var loadFromStorage = function (category) {
     var storage = JSON.parse(localStorage.getItem("allRecipes"));
     
     var $timeIcon = `<svg class="statsButtons" enable-background="new 0 0 24 24" height="26px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path clip-rule="evenodd" d="M12,0C5.375,0,0.003,5.373,0.003,12c0,6.627,5.372,12,11.997,12    c6.626,0,11.997-5.373,11.997-12C23.997,5.373,18.626,0,12,0z M16.412,16.709l-0.35,0.35c-0.291,0.291-0.782,0.305-1.088,0.029    l-4.52-3.955c-0.308-0.275-0.541-0.838-0.521-1.25l0.419-7.134C10.374,4.336,10.729,4,11.142,4h0.493    c0.413,0,0.767,0.336,0.787,0.748l0.343,5.934c0.021,0.413,0.262,1,0.535,1.309l3.144,3.628    C16.717,15.928,16.704,16.418,16.412,16.709z" fill-rule="evenodd"/></g></g></svg>`
@@ -13,38 +14,35 @@
     // start iterating over database
     for (var i = 0; i < storage.length; i += 1) {
       var recipe = storage[i];
-      
-        if(recipe.category === category)
-        {
-          // get all the needed info for current purpose
-          var title = recipe.name;
+
+      if (recipe.category === category) {
+        // get all the needed info for current purpose
+        var title = recipe.name;
         var picture = recipe.picture;
         var specialId = recipe.id;
-        
+
         var time = null;
-        if (recipe.time){
+        if (recipe.time) {
           time = recipe.time;
         }
-        
+
         var servings = null;
-        if (recipe.servings){
+        if (recipe.servings) {
           servings = recipe.servings + " portions";
         }
-        
+
         var nutrition = null;
         var allNutrition = null;
-        if (recipe.nutrition)
-        {
-          nutrition = recipe.nutrition.totalCalories + " cal";
-          allNutrition = recipe.nutrition;  
+        if (recipe.nutrition) {
+          nutrition = recipe.nutrition.totalCalories;
+          allNutrition = recipe.nutrition;
         }
-        
-        var rating = "null";
-        if (recipe.rating){
+
+        var rating = "N/A";
+        if (recipe.rating) {
           rating = recipe.rating;
         }
-        
-        
+
         // building the structure, creating all the tags needed and attach attr/classes
         var $recipeBox = $("#recipeBox");
         var $newRecipeWindow = $("<div>").addClass("recipeMainWindow col-sm-6 center-block");
@@ -53,115 +51,112 @@
         var $newRecipeImg = $("<img>").addClass("recipeImage");
         var $newRecipeIconWindow = $("<div>").addClass("recipeIconsWindow");
         var $newStatsButton = $("<div>").addClass("statsButtons-container col-xs-3");
-        
+
         var $rating = $("<p>").addClass("stats");
         var $link1 = $("<a>");
         var $buttonIcon1 = $ratingIcon;
-        
+
         var $time = $("<p>").addClass("stats");
         var $link2 = $("<a>");
         var $buttonIcon2 = $timeIcon;
-        
+
         var $portions = $("<p>").addClass("stats");
         var $link4 = $("<a>");
         var $buttonIcon4 = $portionsIcon;
-        
+
         var $calories = $("<p>").addClass("stats");
         var $link3 = $("<a>");
         var $buttonIcon3 = $nutritionIcon;
-        
+
         // put content in every div/tag/block
         $newTitleWindow.html(title);
-        $newTitleWindow.attr("title",specialId);
-        $newRecipeImg.attr("src",picture);
-        $newRecipeImg.attr("alt",specialId);
-        
-        
-        if(rating)
-        {
+        $newTitleWindow.attr("title", specialId);
+        $newRecipeImg.attr("src", picture);
+        $newRecipeImg.attr("alt", specialId);
+
+
+        if (rating) {
           $rating.html(rating);
         }
-        
-        if(time){
+
+        if (time) {
           $time.html(time);
         }
-        
-        if(servings){
+
+        if (servings) {
           $portions.html(servings);
         }
-        
-        if(nutrition) {
+
+        if (nutrition) {
           $calories.html(nutrition);
         }
-        
-        
+
+
         // create structure of additionalInfo icons
         $newStatsButton
-        .append($rating)
-        .append(($link1).append($buttonIcon1))
-        .append($time)
-        .append(($link2).append($buttonIcon2))
-        .append($portions)
-        .append(($link4).append($buttonIcon4))
-        .append($calories)
-        .append(($link3).append($buttonIcon3))
-        
+          .append($rating)
+          .append(($link1).append($buttonIcon1))
+          .append($time)
+          .append(($link2).append($buttonIcon2))
+          .append($portions)
+          .append(($link4).append($buttonIcon4))
+          .append($calories)
+          .append(($link3).append($buttonIcon3))
+
         // append already structured additionalInfo icons to its parent
         $newRecipeIconWindow.append($newStatsButton);
-        
-        
+
+
         // recipeImageWindow is formed
         $newRecipeImageWindow.append($newTitleWindow)
-        .append($newRecipeImg)
-        .append($newRecipeIconWindow);
-        
+          .append($newRecipeImg)
+          .append($newRecipeIconWindow);
+
         // full recipeWindow is formed
         $newRecipeWindow.append($newRecipeImageWindow)
-        
+
         // attach finnished recipe to the parent and we are done
         $newRecipeWindow.appendTo($recipeBox);
-      }  
+      }
     }
   };
-  
+
   var $fromMenuMeat = $("#showMeat");
   var $fromMenuFish = $("#showFish");
   var $fromMenuVegan = $("#showVegan");
   var $fromMenuDessert = $("#showDessert");
-  
-  
-  $fromMenuMeat.on("click",function(){
+
+  $fromMenuMeat.on("click", function () {
     var categoryMeal = $fromMenuMeat.html();
-   
-    $( ".recipesShowModal" ).css( "display", "block" );
-    
+
+    $(".recipesShowModal").css("display", "block");
+
     $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
-  
-  $fromMenuFish.on("click",function(){
+
+  $fromMenuFish.on("click", function () {
     var categoryMeal = $fromMenuFish.html();
-    
-    $( ".recipesShowModal" ).css( "display", "block" );
-    
+
+    $(".recipesShowModal").css("display", "block");
+
     $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
-  
-  $fromMenuVegan.on("click",function(){
+
+  $fromMenuVegan.on("click", function () {
     var categoryMeal = $fromMenuVegan.html();
-   
-    $( ".recipesShowModal" ).css( "display", "block" );
+
+    $(".recipesShowModal").css("display", "block");
 
     $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
 
-  $fromMenuDessert.on("click",function(){
+  $fromMenuDessert.on("click", function () {
     var categoryMeal = $fromMenuDessert.html();
-   
-    $( ".recipesShowModal" ).css( "display", "block" );
 
+    $(".recipesShowModal").css("display", "block");
     $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })

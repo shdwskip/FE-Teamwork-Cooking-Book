@@ -10,10 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
-
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Work+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Work+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rajdhani">
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -64,7 +62,6 @@
 
                 <div id="side-menu" class="sidenav">
 
-
                     <div class="menu">
 
                         <li>
@@ -82,16 +79,13 @@
                         </li>
 
                     </div>
+
                     <div class="addRecipeBtn">
                         <button class="but btn btn-success" type="button" id="add-recipe">ADD RECIPE</button>
-
                     </div>
 
                 </div>
-
             </div>
-
-
         </div>
 
     </header>
@@ -108,63 +102,12 @@
 
     </div>
 
-    <div class="dialog">
-
-        <h2>Add Your Recipe</h2>
-        <div class="row">
-
-            <div class="col-xs-6 col-lg-6">
-
-                <select class="category-select form-control" required="required">
-                    <option id="default-category" selected="selected" disabled="disabled">Select Category</option>
-                    <option value="">Meat</option>
-                    <option value="">Fish</option>
-                    <option value="">Vegan</option>
-                    <option value="">Dessert</option>
-                </select>
-
-
-                <div class="recipe-name">
-                    <h4>Recipe Name</h4>
-                    <input placeholder="Recipe Name" type="text" class="form-control" value="" required="required" pattern="" title="">
-                </div>
-
-                <div class="ingredients-container">
-                    <h4>Ingredients</h4>
-                    <textarea placeholder="Enter ingredients, separated by commas" class="form-control" rows="3" required="required"></textarea>
-                </div>
-
-                <div class="description-container">
-                    <h4>Preparation</h4>
-                    <textarea placeholder="Describe preparation steps" class="form-control" rows="3" required="required"></textarea>
-                </div>
-
-                <div class="img-url">
-                    <h4>Picture</h4>
-                    <input type="text" id="meal-img-url" class="form-control" placeholder="URL of the meal" value="" required="required">
-                </div>
-
-                <div class="save-close-recipe">
-                    <button id="save-recipe" class="btn btn-success" type="button">Save</button>
-                    <button id="close-add-recipe" type="button" class="btn btn-danger">Close</button>
-                </div>
-
-            </div>
-
-            <div class="col-xs-6 col-lg-6">
-                <img id="preview" src="" width="100%" height="auto">
-            </div>
-
-        </div>
-    </div>
-
     <div class="recipesShowModal container">
         <h2>Menu list of all recipes with the chosen category</h2>
         <div class="rowBackground row">
-            <div id = "recipeBox" class="outerBox"></div>
+            <div id="recipeBox" class="outerBox"></div>
         </div>
     </div>
-
 
     <div class="dialog">
 
@@ -215,7 +158,37 @@
 
         </div>
     </div>
+  
+    <div id="meal-window" class="meal-window">
+        <span id="back" class="meal-icons"></span>;
 
+        <div class="details row">
+            <div class="meal-basics col-xs-3 cols-sm-6 col-lg-12">
+                <span>
+                    <h2 id="meal-name"></h2>
+                </span>
+                <span id="servings" class="meal-icons"></span>
+                <span id="time" class="meal-icons"></span>
+                <span id="calories" class="meal-icons"></span>
+            </div>
+        </div>
+
+        <div class="ingredients-container row">
+            <div class="ingredients col-xs-9">
+                <span id="ingrids"></span>
+            </div>
+        </div>
+
+        <div class="pic-n-prepare row">
+            <div class="prepare col-xs-6">
+                <p id="preparation"></p>
+            </div>
+            <div class="picture col-xs-3">
+                <img id="meal-pic">
+            </div>
+        </div>
+
+    </div>
 
     <footer>
         <p>&#169 Dope Chefs</p>
@@ -228,9 +201,8 @@
     <script src="js/save-recipe.js"></script>
     <script src="js/default-recipes.js"></script>
     <script src="js/add-recipe-box.js"></script>
-
     <script src="js/load-storage-for-recipes-show.js"></script>
-    
+    <script src="js/open-meal.js"></script>
 </body>
 
 </html>

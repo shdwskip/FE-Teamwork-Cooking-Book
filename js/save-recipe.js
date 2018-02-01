@@ -13,7 +13,7 @@
             picture: $imgURL
         }
 
-        if (!Array.isArray($allRecipes)) {
+        if (typeof $allRecipes === 'string') {
             $allRecipes = JSON.parse($allRecipes);
         }
 
