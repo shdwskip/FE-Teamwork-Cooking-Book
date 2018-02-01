@@ -119,9 +119,8 @@
 
     var $defaultRecipes = localStorage.getItem('allRecipes') ?
     localStorage.getItem('allRecipes') : [brusselsSprouts, meatballsNirvana, tunaSteaks, tooMuchChoco];
-
+    
     if (typeof $defaultRecipes !== 'string') {
         localStorage.setItem('allRecipes', JSON.stringify($defaultRecipes));
     }
-
 })();
