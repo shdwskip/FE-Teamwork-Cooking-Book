@@ -19,6 +19,9 @@
                     if (recipe.nutrition) {
                         $('#calories').html($caloriesSVG + recipe.nutrition.totalCalories);
                     }
+                    if (recipe.totalRating) {
+                        $('#ratingCounter').html(recipe.totalRating);
+                    }
                     $('.meal-basics').attr('id', recipeId);
                     $('#ingrids').html(recipe.ingredients.join(', '));
                     $('#preparation').html(recipe.preparation);
