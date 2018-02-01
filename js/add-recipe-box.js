@@ -13,7 +13,6 @@
         $('.recipesShowModal').css("display", "none");
         // close add recipe window when clicked anywhere outside the box
         $(document).mouseup(function (e) {
-            debugger;
             var container = $('.dialog');
             // if the target of the click isn't the container nor a descendant of the container
             if (!container.is(e.target) && container.has(e.target).length === 0) {
