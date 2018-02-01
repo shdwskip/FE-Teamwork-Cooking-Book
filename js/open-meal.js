@@ -79,7 +79,8 @@
 
     // show meal when clicked on meal's image or title
     $(document).on('click', '.recipeImageWindow', function (e) {
-        var $id = $('.recipeImageWindow img').attr('alt');
+        var $currentClicked = this.childNodes[1];
+        var $id = $currentClicked.alt;
         $('.recipesShowModal').css('display', 'none');
         visualizeMeal($id);
     });
