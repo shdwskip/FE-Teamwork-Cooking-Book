@@ -15,5 +15,34 @@ $(function () {
       
     } 
   });
+  
+  var moveTitle = function () {
+    $("#title").css("font-size", "3vmax");
+    $(".title-container").css("position", "fixed");
+    $(".title-container").css("top", "0");
+    $(".title-container").css("margin-top", "1%");
+    $(".title-container").css("justify-content", "center");
+    $(".search-box").css("display", "none");
+  }
+  $(".menu li").click(function () {
+    moveTitle();
+
 
   });
+  $(".addRecipeBtn").click(function () {
+    moveTitle();
+
+  });
+  $("#contact").click(function () {
+    moveTitle();
+  });
+
+
+  $("#contact").on("click", function () {
+    $(".concactInfo").css("display", "block");
+  });
+
+  window.modifyTitle = {moveTitle};
+});
+
+

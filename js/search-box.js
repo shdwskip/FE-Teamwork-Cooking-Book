@@ -10,13 +10,19 @@ $(function () {
         select: function (event, ui) {
             var $mealName = ui.item.value;
             var $mealId;
+            var $mealCategory;
             database.forEach(function (recipe) {
                 if (recipe.name === $mealName) {
                     $mealId = recipe.id;
+                    $mealCategory = recipe.category;
                     return;
                 }
             })
+            $('.ui-widget').css('display', 'none');
+            $('.search-box').val('');
+            modifyTitle.moveTitle();
             meal.visualizeMeal($mealId);
+            category.loadFromStorage($mealCategory);
         }
     });
 });
