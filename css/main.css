@@ -37,6 +37,9 @@ body {
 .social-buttons:hover {
     fill: rgb(148, 145, 167);
 }
+.concacts {
+cursor: pointer;
+}
 
 .meals-menu {
     padding-top: 1%;
@@ -165,22 +168,59 @@ footer p {
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
     /* margin: 0 auto; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: fixed;
+    left: 20%;
+    bottom: 0;    
     height: 600px;
-    width: 500px;
+    width: 850px;
     border-radius: 15px;
     padding: 20px;
-    z-index: 1;
+   
    
 }
 .concactInfo h2 {
     text-align: center;
     color: #fff;
+    margin-bottom: 50px;
+
+}
+.concactInfo h3 {
+    text-align: center;
+    color: #fff;
     margin-bottom: 30px;
 
+}
+
+.persons .name {
+    color: #fff;
+}
+
+.persons ul {
+   
+    display: inline-block;
+    
+}
+
+.persons ul li {    
+    text-align: center;
+ margin: 15px;
+ padding-right: 5px;
+   
+}
+
+
+.persons img {
+  width: 200px;
+  height: 200px;
+  border-radius: 5%;
+}
+.persons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 .dialog h2,
@@ -597,12 +637,9 @@ textarea {
     position: absolute;
     left: 0;
     bottom: 0;
-    right: 0;
-    
-    z-index: 1;
-  
-    height: 32px; 
-    
+    right: 0;    
+    z-index: 1;  
+    height: 32px;    
     background: rgba(0, 0, 0, 0.5);
   }
   
@@ -623,12 +660,10 @@ textarea {
   }
   
   .stats{
-    display: inline-block;
-    
+    display: inline-block;    
     float: right;
     margin-top: 12px;
-    margin-left: 5px; 
-    
+    margin-left: 5px;     
     text-decoration: none;
     color: white;
     font-family: 'Rajdhani', sans-serif;

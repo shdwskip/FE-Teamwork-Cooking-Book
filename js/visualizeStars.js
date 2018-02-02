@@ -4,7 +4,7 @@ $(function () {
     $("#stars").toggle();
 
   });
-  $(document).mouseover(function (e) {
+  $(document).mouseup(function (e) {
     var container = $("#stars");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $("#stars").css("display", "none");
@@ -14,9 +14,6 @@ $(function () {
   });
   var sum = 0;
   var $totalRating = 0;
-
-
-  $("#ratingCounter").text(0);
 
   $("#stars").rateYo({
     starWidth: "30px",

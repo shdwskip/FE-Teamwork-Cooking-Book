@@ -3,7 +3,6 @@
 
   $("#ratingStars").click(function () {
     var $id = $('.meal-basics').attr('id');
-    console.log($id);
     setRating($id);
   });
 
