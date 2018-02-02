@@ -99,6 +99,7 @@
     })
 
     scope.meal = {
-        visualizeMeal
+        visualizeMeal,
+        clearMealWindow
     }
 })(window);
