@@ -25,7 +25,9 @@
             protein: "19.6"
         },
         servings: 3,
-        time: '55min'
+        time: '55min',
+        allRatings: [],
+        totalRating: 0
 
     };
 
@@ -55,7 +57,9 @@
             protein: "27.6"
         },
         servings: 4,
-        time: '1h 30min'
+        time: '1h 30min',
+        allRatings: [],
+        totalRating: 0
     };
 
     var tunaSteaks = {
@@ -84,7 +88,9 @@
             protein: "17.6"
         },
         servings: 6,
-        time: '1h 20min'
+        time: '1h 20min',
+        allRatings: [],
+        totalRating: 0
     };
 
     var tooMuchChoco = {
@@ -114,14 +120,15 @@
             protein: "7.6"
         },
         servings: 4,
-        time: '40min'
+        time: '40min',
+        allRatings: [],
+        totalRating: 0
     };
 
     var $defaultRecipes = localStorage.getItem('allRecipes') ?
     localStorage.getItem('allRecipes') : [brusselsSprouts, meatballsNirvana, tunaSteaks, tooMuchChoco];
-
+    
     if (typeof $defaultRecipes !== 'string') {
         localStorage.setItem('allRecipes', JSON.stringify($defaultRecipes));
     }
-
 })();
