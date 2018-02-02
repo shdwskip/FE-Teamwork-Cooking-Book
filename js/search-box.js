@@ -10,13 +10,16 @@ $(function () {
         select: function (event, ui) {
             var $mealName = ui.item.value;
             var $mealId;
+            var $mealCategory;
             database.forEach(function (recipe) {
                 if (recipe.name === $mealName) {
                     $mealId = recipe.id;
+                    $mealCategory = recipe.category;
                     return;
                 }
             })
             meal.visualizeMeal($mealId);
+            category.loadFromStorage($mealCategory);
         }
     });
 });
