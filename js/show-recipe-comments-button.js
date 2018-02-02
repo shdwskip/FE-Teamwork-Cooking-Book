@@ -1,20 +1,20 @@
 (function (scope) {
-  var $commentButtonClicked = $("#showRecipeComments");
-  var $commentWindow = $("#getSpammedComments");
-  var $menuWindow = $("#side-menu");
+  var $commentButton = $("#showRecipeCommentsBtn");
+  var $commentWindow = $("#getRecipeComments");
+  var $sideMenuWindow = $("#side-menu");
 
-  var $mealInfoWindow = $("#meal-window");
-  $mealInfoWindow.css("transition", "margin-left 0.5s");
-  $mealInfoWindow.css("padding", "16px");
+  var $mealDetailsWindow = $("#meal-window");
+  $mealDetailsWindow.css("transition", "margin-left 0.5s");
+  $mealDetailsWindow.css("padding", "16px");
 
 
-  $commentButtonClicked.on("click", function () {
+  $commentButton.on("click", function () {
     hideShowMenus();
   });
 
+
   var hideShowMenus = function () {
-    var property = $commentWindow.css("display");
-    if (property === "block") {
+    if ($commentWindow.css("display") === "block") {
       $commentWindow.css("display", "none");
 
     } else {
@@ -23,17 +23,27 @@
 
     if ($commentWindow.css("display") === "block") {
       $(".commentSlide").css("left", "67%");
-      $mealInfoWindow.css("margin-left", "-16.5%");
-      $menuWindow.css("display", "none");
+      $mealDetailsWindow.css("margin-left", "-16.5%");
+      $sideMenuWindow.css("display", "none");
+
     } else {
       $(".commentSlide").css("left", "100%");
-      $mealInfoWindow.css("margin-left", "");
-      $menuWindow.css("display", "block");
+      $mealDetailsWindow.css("margin-left", "");
+      $sideMenuWindow.css("display", "block");
+
     }
   };
 
+  var hideShowMenusBack = function () {
+    $commentButton.css("display", "none");
+    $commentWindow.css("display", "none");
+    $sideMenuWindow.css("display", "block");
+
+  };
+
   scope.menu = {
-    hideShowMenus
+    hideShowMenus,
+    hideShowMenusBack,
   };
 
 
