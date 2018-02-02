@@ -4,7 +4,7 @@ $(function () {
     $("#stars").toggle();
 
   });
-  $(document).mouseup(function (e) {
+  $(document).mouseover(function (e) {
     var container = $("#stars");
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       $("#stars").css("display", "none");

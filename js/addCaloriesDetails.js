@@ -1,5 +1,4 @@
 
-
    (function () {
     $("#calories").css("cursor", "pointer");
     // debugger;
@@ -12,22 +11,7 @@
 
     var visualizeCalories = function (id) {
         var $recipesData = JSON.parse(localStorage.getItem('allRecipes'));
-    //   for (var i = 0; i < $recipesData.length; i += 1) {
-    //      var recipe = $recipesData[i];
-    //      if (recipe.id === id) {
-            
-    //        $('#tfat').text($recipesData[i].nutrition.fat);
-    //        $('#sfat').text($recipesData[i].nutrition.saturatedFat);
-    //        $('#chol').text($recipesData[i].nutrition.cholesterol);
-    //        $('#sod').text($recipesData[i].nutrition.sodium);
-    //        $('#tcarbs').text($recipesData[i].nutrition.totalCarbs);
-    //        $('#fib').text($recipesData[i].nutrition.fibyr);
-    //        $('#sug').text($recipesData[i].nutrition.sugar);
-    //        $('#pro').text($recipesData[i].nutrition.protein);
-          
-    //          }      
-          
-    //      }
+  
  
     $recipesData.forEach(function (element) {   
        

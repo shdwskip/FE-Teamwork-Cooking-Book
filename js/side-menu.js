@@ -18,10 +18,11 @@ $(function () {
   
   var moveTitle = function () {
     $("#title").css("font-size", "3vmax");
-    $(".title-container").css("position", "fixed");
-    $(".title-container").css("top", "0");
-    $(".title-container").css("margin-top", "1%");
-    $(".title-container").css("justify-content", "center");
+    $(".title-anchor").css("position", "fixed");
+    $(".title-anchor").css("top", "0");
+    $(".title-anchor").css("right", "40%");
+    $(".title-anchor").css("margin-top", "1%");
+    $(".title-anchor").css("justify-content", "center");
     $(".search-box").css("display", "none");
   }
   $(".menu li").click(function () {
@@ -38,9 +39,7 @@ $(function () {
   });
 
 
-  $("#contact").on("click", function () {
-    $(".concactInfo").css("display", "block");
-  });
+
 
   window.modifyTitle = {moveTitle};
 });
