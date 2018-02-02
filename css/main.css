@@ -154,6 +154,27 @@ footer p {
     border-radius: 15px;
     padding: 20px;
 }
+.concactInfo {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 600px;
+    width: 500px;
+    border-radius: 15px;
+    padding: 20px;
+    z-index: 1;
+   
+}
+.concactInfo h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+
+}
 
 .dialog h2,
 h4 {
@@ -249,7 +270,7 @@ textarea {
     padding: 20px;
 }
 
-.but {
+.recipeButton {
     position: absolute;
     bottom: 0;
     margin-left: 25%;
@@ -357,11 +378,111 @@ textarea {
     cursor: default;
 }
 
-.meal-icons:last-child{
+ /*
+ .meal-icons:last-child{
     cursor: pointer;
 }
+*/
 .meal-icons svg {
     margin-right: 10px;
+}
+
+/* Recipe voting */
+.rStar img{
+    height: 35px;
+    width: 35px;  
+      cursor: pointer;
+  }
+  
+  .starsRate {
+      display: none;
+  }
+.displayStars {
+    display: none;
+}
+  
+  /* Calories modal button */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    margin-top: px;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */   
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+ 
+   
+}
+
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-body li {
+    list-style-type: none;
+}
+.modal-header {
+    text-align: center;
+    padding: 2px 16px;
+    background-color: rgba(255, 255, 255,1);
+    color: #000;
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+   
+}
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+
+}
+.row {
+    margin-top: 10px;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.row-last {
+    margin-bottom: 20px;
+}
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+    color: #fff;
+    
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    margin: auto;
+    border: 1px solid #888;
+    width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
 }
 
 /* #calories-text {
