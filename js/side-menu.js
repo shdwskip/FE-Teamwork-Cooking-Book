@@ -38,9 +38,9 @@ $(function () {
   });
 
 
-  $("#contact").on("click", function () {
-    $(".concactInfo").css("display", "block");
-  });
+  // $("#contact").on("click", function () {
+  //   $(".concactInfo").css("display", "block");
+  // });
 
   window.modifyTitle = {moveTitle};
 });
