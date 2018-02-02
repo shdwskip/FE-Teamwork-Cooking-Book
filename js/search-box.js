@@ -4,7 +4,19 @@ $(function () {
     database.forEach(function (recipe) {
         recipesNames.push(recipe.name);
     })
+
     $(".search-box").autocomplete({
-        source: recipesNames
+        source: recipesNames,
+        select: function (event, ui) {
+            var $mealName = ui.item.value;
+            var $mealId;
+            database.forEach(function (recipe) {
+                if (recipe.name === $mealName) {
+                    $mealId = recipe.id;
+                    return;
+                }
+            })
+            meal.visualizeMeal($mealId);
+        }
     });
 });

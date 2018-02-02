@@ -1,9 +1,8 @@
-(function () {
+(function (scope) {
     var visualizeMeal = function (recipeId) {
-        var $recipesData = JSON.parse(localStorage.getItem('allRecipes'));
+        var recipesData = JSON.parse(localStorage.getItem('allRecipes'));
         if ($('.meal-window').css('display') === 'none') {
-            for (var i = 0; i < $recipesData.length; i += 1) {
-                var recipe = $recipesData[i];
+            recipesData.forEach(function (recipe) {
                 if (recipe.id === recipeId) {
                     $('#back').html($backButtonSVG);
                     $('#back').find('svg').css('margin-top', '10px');
@@ -27,11 +26,11 @@
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
-                    break;
+                    return;
                 }
-            }
+            });
         }
-        
+
         $(document).mouseup(function (e) {
             var container = $('.meal-window');
             // if the target of the click isn't the container nor a descendant of the container
@@ -98,4 +97,7 @@
         $('.recipesShowModal').css('display', 'block');
     })
 
-})();
+    scope.meal = {
+        visualizeMeal
+    }
+})(window);
