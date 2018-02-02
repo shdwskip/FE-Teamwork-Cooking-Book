@@ -18,6 +18,7 @@
                     if (recipe.nutrition) {
                         $('#calories').html($caloriesSVG + recipe.nutrition.totalCalories);
                     }
+                    debugger;
                     if (recipe.totalRating) {
                         $('#ratingCounter').html(recipe.totalRating);
                     }
@@ -26,7 +27,6 @@
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
-                    return;
                 }
             });
         }
@@ -49,6 +49,7 @@
         $('.meal-basics').removeAttr('id');
         $('#ingrids').html('');
         $('#preparation').html('');
+        $('#ratingCounter').html('');
         $('#meal-pic').removeAttr('src');
     }
 
