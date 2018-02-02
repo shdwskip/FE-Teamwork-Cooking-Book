@@ -1,9 +1,8 @@
 (function () {
     var visualizeMeal = function (recipeId) {
-        var $recipesData = JSON.parse(localStorage.getItem('allRecipes'));
+        var recipesData = JSON.parse(localStorage.getItem('allRecipes'));
         if ($('.meal-window').css('display') === 'none') {
-            for (var i = 0; i < $recipesData.length; i += 1) {
-                var recipe = $recipesData[i];
+            recipesData.forEach(function (recipe){
                 if (recipe.id === recipeId) {
                     $('#back').html($backButtonSVG);
                     $('#back').find('svg').css('margin-top', '10px');
@@ -24,19 +23,57 @@
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
-                    break;
+                    // break;
                 }
-            }
+            });
+        }
+        
+        var $commentButtonClicked = $("#showRecipeComments");
+        var $commentWindow = $("#getSpammedComments");
+        
+        var $mealInfoWindow = $("#meal-window");
+      
+        if($mealInfoWindow.css("display")==="block"){
+            $commentButtonClicked.css("display","block");
         }
         
         $(document).mouseup(function (e) {
-            var container = $('.meal-window');
+            var container = $('#meal-window');
+            var rightDiv = $("#getSpammedComments");
+            var buttonShow = $("#showRecipeComments");
+
             // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) && container.has(e.target).length === 0) {
+            if (!container.is(e.target) 
+                && container.has(e.target).length === 0 
+                && !rightDiv.is(e.target) 
+                && rightDiv.has(e.target).length === 0
+                && !buttonShow.is(e.target) 
+                && buttonShow.has(e.target).length === 0
+            ) {
+            
+            
+                // console.log(this);
+
+                container.hide();
+                $commentButtonClicked.css("display","none");
+                $("#getSpammedComments").css("display", "none");
+                // menu button bug somewhere here !!!
+                
+                $("#commentWindow").css("display","none");
+                menu.hideShowMenus();
+                $("#getSpammedComments").css("display", "none");
+                
+                $("#side-menu").css("display", "block");
+
+                $(".commentSlide").css("left", "100%");
+                $("#meal-window").css("margin-left", "");
+
                 container.hide();
                 clearMealWindow();
             }
+            
         });
+
     }
 
     var clearMealWindow = function () {
@@ -82,6 +119,8 @@
         var $currentClicked = this.childNodes[1];
         var $id = $currentClicked.alt;
         $('.recipesShowModal').css('display', 'none');
+        $("#getSpammedComments").css("display", "none");
+
         visualizeMeal($id);
     });
 
@@ -93,6 +132,20 @@
     $('#back').on('click', function () {
         $('.meal-window').css('display', 'none');
         $('.recipesShowModal').css('display', 'block');
+        
+        $("#showRecipeComments").css("display", "none");
+        if($("#commentWindow").css("display")==="none"){
+            $("#commentWindow").css("display","block");
+            menu.hideShowMenus();
+        }else{
+            $("#commentWindow").css("display","none");
+            menu.hideShowMenus();
+            $("#getSpammedComments").css("display", "none");
+            $("#side-menu").css("display", "block");
+
+            $(".commentSlide").css("left", "100%");
+            $("#meal-window").css("margin-left", "");
+        }
     })
 
 })();
