@@ -1,8 +1,9 @@
-(function () {
+(function (scope) {
     var visualizeMeal = function (recipeId) {
         var recipesData = JSON.parse(localStorage.getItem('allRecipes'));
         if ($('.meal-window').css('display') === 'none') {
-            recipesData.forEach(function (recipe){
+
+            recipesData.forEach(function (recipe) {
                 if (recipe.id === recipeId) {
                     $('#back').html($backButtonSVG);
                     $('#back').find('svg').css('margin-top', '10px');
@@ -18,12 +19,14 @@
                     if (recipe.nutrition) {
                         $('#calories').html($caloriesSVG + recipe.nutrition.totalCalories);
                     }
+                    if (recipe.totalRating) {
+                        $('#ratingCounter').html(recipe.totalRating);
+                    }
                     $('.meal-basics').attr('id', recipeId);
                     $('#ingrids').html(recipe.ingredients.join(', '));
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
-                    // break;
                 }
             });
         }
@@ -36,7 +39,7 @@
         if($mealInfoWindow.css("display")==="block"){
             $commentButtonClicked.css("display","block");
         }
-        
+
         $(document).mouseup(function (e) {
             var container = $('#meal-window');
             var rightDiv = $("#getSpammedComments");
@@ -84,6 +87,7 @@
         $('.meal-basics').removeAttr('id');
         $('#ingrids').html('');
         $('#preparation').html('');
+        $('#ratingCounter').html('');
         $('#meal-pic').removeAttr('src');
     }
 
@@ -148,4 +152,8 @@
         }
     })
 
-})();
+    scope.meal = {
+        visualizeMeal,
+        clearMealWindow
+    }
+})(window);
