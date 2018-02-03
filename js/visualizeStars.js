@@ -1,17 +1,17 @@
 $(function () {
 
   $("#ratingStar").click(function () {
-    $("#stars").toggle();
+      $("#stars").toggle();
 
   });
-  $(document).mouseover(function (e) {
-    var container = $("#stars");
-    if (!container.is(e.target) && container.has(e.target).length === 0) {
-      $("#stars").css("display", "none");
-    } else {
-      $("#stars").css("display", "block");
-    }
-  });
+
+  // $(document).mouseover(function (e) {
+  //   var container = $("#stars");
+  //   if (!container.is(e.target) && container.has(e.target).length === 0) {
+  //     $("#stars").css("display", "none");
+  //   }
+  // });
+  
   var sum = 0;
   var $totalRating = 0;
 
@@ -33,7 +33,7 @@ $(function () {
     var $ratings = stars.getRating($currentId).allRatings;
 
     $ratings.push(data.rating);
-    alert("You vote with " + data.rating + "!");
+    alert("You voted with " + data.rating + "!");
     var $totalRating = 0;
 
     $ratings.forEach(function (el) {
@@ -46,6 +46,6 @@ $(function () {
   });
 
 
-  $("#stars").rateYo();
+  // $("#stars").rateYo(); not needed
 
 });
