@@ -34,11 +34,6 @@ $(function () {
     moveTitle();
 
   });
-  $("#contact").click(function () {
-    moveTitle();
-  });
-
-
 
   window.modifyTitle = {moveTitle};
 });
