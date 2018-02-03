@@ -102,6 +102,7 @@ cursor: pointer;
     border-radius: 15px;
     display: block;
     border: none;
+    color: white;
 }
 
 .search-box::placeholder {

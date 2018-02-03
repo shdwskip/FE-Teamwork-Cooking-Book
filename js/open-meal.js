@@ -66,7 +66,7 @@
                 menu.hideShowMenus();
                 $("#getSpammedComments").css("display", "none");
                 
-                $("#side-menu").css("display", "block");
+                // $("#side-menu").css("display", "block");
 
                 $(".commentSlide").css("left", "100%");
                 $("#meal-window").css("margin-left", "");
