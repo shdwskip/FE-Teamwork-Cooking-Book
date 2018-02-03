@@ -170,6 +170,41 @@
         </div>
     </div>
 
+        <!-- comments start -->
+        
+
+    <button id="showRecipeComments" class="showComments">Comments</button>
+
+    <div id="getSpammedComments" class="commentSlide">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="rowWindow">
+                    <input id="user" class="nameBox center-block" name="name" placeholder="Your name: "></input>
+                    <textarea id="comment-input" class="commentaryBox center-block" name="comment" placeholder="Write comment..."></textarea>
+                    <button id="post-button" class="submitPost" type="button">Post</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-12">
+                <div class="rowWindow">
+
+                    <ul id="all-comments" class="newComment">
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- comments end -->
+
     <div class="dialog">
 
         <h2>Add Your Recipe</h2>
@@ -327,6 +362,7 @@
     <script src="js/add-recipe-box.js"></script>
     <script src="js/load-storage-for-recipes-show.js"></script>
     <script src="js/open-meal.js"></script>
+    <script src="js/show-recipe-comments-button.js"></script>
     <script src="js/comments-jquery.js"></script>
     <script src="js/stars.js"></script>
     <script src="js/visualizeStars.js"></script>
