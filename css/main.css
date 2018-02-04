@@ -5,19 +5,21 @@ body {
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
-    /* padding-top: 70px; */
 }
+
+/* Home page */
 
 .social-container {
     float: right;
     padding-top: 1%;
     padding-right: 2%;
+    overflow: hidden;
+    z-index: 1;
 }
 
 .social-container a {
     text-decoration: none;
     float: right;
-    /* margin-right: 15px; */
 }
 
 .menu-button {
@@ -34,16 +36,29 @@ body {
     width: 5vmin;
 }
 
+.search-icon {
+    display: none;
+    margin: 0 auto;
+    text-decoration: none;
+}
+
+.search-icon a {
+    fill: #D8D9D8;
+    width: 5vmin;
+}
+
 .social-buttons:hover {
     fill: rgb(148, 145, 167);
 }
+
 .concacts {
-cursor: pointer;
+    cursor: pointer;
 }
 
 .meals-menu {
     padding-top: 1%;
     padding-left: 3%;
+    z-index: 1;
 }
 
 .meals-menu a {
@@ -52,13 +67,11 @@ cursor: pointer;
 
 .title-search {
     margin-top: 7%;
-    /* padding-top: 10%; */
 }
 
 .title-anchor {
     font-family: 'Dancing Script', cursive;
     font-size: 7vmax;
-    /* text-align: center; */
     color: white;
     letter-spacing: 3px;
 }
@@ -69,14 +82,10 @@ cursor: pointer;
 }
 
 .title-container {
-    /* display: flex; */
-    /* align-items: center; */
     justify-content: center;
-    /* margin: 0 auto; */
 }
 
 .search-container {
-    /* display: flex; */
     margin: 0 auto;
     padding-top: 1.5%;
 }
@@ -115,6 +124,12 @@ cursor: pointer;
     background-color: rgba(0, 0, 0, 0.6);
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+}
+
+.ui-widget li:hover {
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 1)
 }
 
 .search-box::-webkit-input-placeholder {
@@ -165,32 +180,30 @@ footer p {
     border-radius: 15px;
     padding: 20px;
 }
+
 .concactInfo {
     display: none;
     background-color: rgba(0, 0, 0, 0.7);
-    /* margin: 0 auto; */
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     height: 600px;
     width: 850px;
     border-radius: 15px;
     padding: 20px;
-   
-   
 }
+
 .concactInfo h2 {
     text-align: center;
     color: #fff;
     margin-bottom: 50px;
-
 }
+
 .concactInfo h3 {
     text-align: center;
     color: #fff;
     margin-bottom: 30px;
-
 }
 
 .persons .name {
@@ -198,24 +211,21 @@ footer p {
 }
 
 .persons ul {
-   
     display: inline-block;
-    
 }
 
-.persons ul li {    
+.persons ul li {
     text-align: center;
- margin: 15px;
- padding-right: 5px;
-   
+    margin: 15px;
+    padding-right: 5px;
 }
-
 
 .persons img {
-  width: 200px;
-  height: 200px;
-  border-radius: 5%;
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
 }
+
 .persons a {
     text-decoration: none;
     font-size: 20px;
@@ -362,8 +372,6 @@ textarea {
 
 .meal-basics {
     margin-left: 5%;
-    /* margin-top: 5%; */
-    /* border: 1px solid orangered; */
 }
 
 .meal-basics span {
@@ -381,37 +389,30 @@ textarea {
 }
 
 .ingredients {
-    /* border: 1px solid yellowgreen; */
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 15px;
-    /* margin: 5% 5%; */
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 5%;
 }
 
 .pic-n-prepare {
-    /* border: 1px solid cyan; */
     position: absolute;
     bottom: 0;
 }
 
 .prepare {
-    /* border: 1px solid yellowgreen; */
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    /* font-weight: bold; */
     font-size: 20px;
     margin-left: 5%;
     margin-top: 3%;
     margin-bottom: 30px;
-    /* height: 300px; */
     width: 800px;
 }
 
 .picture {
-    /* border: 1px solid pink; */
     margin-top: 3%;
     margin-right: 3%;
     float: right;
@@ -427,48 +428,49 @@ textarea {
     cursor: default;
 }
 
- /*
- .meal-icons:last-child{
-    cursor: pointer;
-}
-*/
 .meal-icons svg {
     margin-right: 10px;
 }
 
 /* Recipe voting */
-.rStar img{
+
+.rStar img {
     height: 35px;
-    width: 35px;  
-      cursor: pointer;
-  }
-  
-  .starsRate {
-      display: none;
-  }
+    width: 35px;
+    cursor: pointer;
+}
+
+.starsRate {
+    display: none;
+}
+
 .displayStars {
     display: none;
 }
-  
-  /* Calories modal button */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+
+/* Calories modal button */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     margin-top: px;
     top: 0;
     left: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */   
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
- 
-   
 }
 
-
 /* The Close Button */
+
 .close {
     color: #000;
     float: right;
@@ -482,39 +484,44 @@ textarea {
     text-decoration: none;
     cursor: pointer;
 }
+
 .modal-body li {
     list-style-type: none;
 }
+
 .modal-header {
     text-align: center;
     padding: 2px 16px;
-    background-color: rgba(255, 255, 255,1);
+    background-color: rgba(255, 255, 255, 1);
     color: #000;
-   border-top-left-radius: 10px;
-   border-top-right-radius: 10px;
-   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
+
 .modal-header h2 {
     font-size: 20px;
     font-weight: bold;
-
 }
+
 .row {
     margin-top: 10px;
     font-size: 14px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
+
 .row-last {
     margin-bottom: 20px;
 }
+
 /* Modal Body */
+
 .modal-body {
     padding: 2px 16px;
     color: #fff;
-    
 }
 
 /* Modal Content */
+
 .modal-content {
     position: relative;
     border-radius: 10px;
@@ -523,15 +530,22 @@ textarea {
     margin: auto;
     border: 1px solid #888;
     width: 300px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: animatetop;
     animation-duration: 0.4s
 }
 
 /* Add Animation */
+
 @keyframes animatetop {
-    from {top: -300px; opacity: 0}
-    to {top: 0; opacity: 1}
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
 }
 
 /* #calories-text {
@@ -553,451 +567,380 @@ textarea {
 
 /* Recipe visualization styles and mediaQuery - start */
 
-.outerBox{
+.outerBox {
     padding: 0;
-    margin-right: 60px; 
-  }
-  
-  .rowBackground{
+    margin-right: 60px;
+}
+
+.rowBackground {
     position: absolute;
-    margin-top: 30px;  
+    margin-top: 30px;
     left: 50px;
-  
     /* background: rgba(220, 0, 0, 0.7); */
-  
     width: 100%;
     height: 78%;
-  
-    overflow: auto;  
-  }
-  
-  .recipeMainWindow{
+    overflow: auto;
+}
+
+.recipeMainWindow {
     position: relative;
     padding: 10px;
-  }
-  
-  .recipeImageWindow{
+}
+
+.recipeImageWindow {
     position: relative;
-    
     width: 100%;
     height: 150px;
-    
     overflow: hidden;
-  }
-  
-  .recipeTitle{
+}
+
+.recipeTitle {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
-  
     z-index: 1;
-    
     background: rgba(0, 0, 0, 0.5);
-    
     font-size: 25px;
     color: white;
     font-family: 'Rajdhani', sans-serif;
-  
-  }
-  
-  .recipeImage{
+}
+
+.recipeImage {
     width: 100%;
     height: 150px;
-    
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
-    
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  
-  .recipeImage:hover{
+}
+
+.recipeImage:hover {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  
     cursor: pointer;
-  
-  }
-  
-  .recipeTitle:hover{
+}
+
+.recipeTitle:hover {
     cursor: pointer;
-  
-  }
-  
-  .recipeIconsWindow{
+}
+
+.recipeIconsWindow {
     position: absolute;
     left: 0;
     bottom: 0;
     right: 0;
-    height: 32px; 
+    height: 32px;
     background: rgba(0, 0, 0, 0.5);
-  }
-  
-  .statsButtons-container {
+}
+
+.statsButtons-container {
     float: right;
-   
     width: 100%;
     height: 100%;
-    
-  }
-  
-  .statsButtons-container a {
+}
+
+.statsButtons-container a {
     float: right;
-    
-    margin-top: 2px; 
-    margin-left: 12px; 
+    margin-top: 2px;
+    margin-left: 12px;
     text-decoration: none;
-  
-  }
-  
-  .stats{
-    display: inline-block;    
+}
+
+.stats {
+    display: inline-block;
     float: right;
     margin-top: 12px;
-    margin-left: 5px; 
+    margin-left: 5px;
     font-size: 13px;
     text-decoration: none;
     color: white;
     font-family: 'Rajdhani', sans-serif;
-  
-  }
-  
-  .statsButtons {
+}
+
+.statsButtons {
     width: 20px;
     height: 20px;
     fill: rgb(255, 255, 255);
-  
-  }
-  
-  .statsButtons:hover {
+}
+
+.statsButtons:hover {
     fill: #D8D9D8;
-  }
-  
-  @media (max-width: 990px) {
-      .recipeTitle {
-      font-size: 25px;
-      }
-      
-      .statsButtons {
-          width: 25px;
-          height: 25px;
-      }
-      
-      .stats{
-          font-size: 14px;
-      }
-  }
-  
-  @media (min-width: 1183px) and (max-width: 1318px) {
-      .recipeTitle {
-          font-size: 25px;
-      }
-          
-      .statsButtons {
-          width: 18px;
-          height: 18px;
-      }
-              
-      .stats{
-          font-size: 14px;
-          margin-left: 2px;
-      }
-  
-      .statsButtons-container a{
-          margin-left: 4px; 
-      }
-  }
-  
-  @media (min-width: 998px) and (max-width: 1183px) {
-      .recipeTitle {
-          font-size: 23px;
-      }
-      
-      .statsButtons {
-          width: 16px;
-          height: 16px;
-      }
-      
-      .stats{
-          font-size: 11px;
-          margin-left: 1px;
-      }        
-      
-      .statsButtons-container a{
-          margin-left: 2px; 
-      }
-  }
-  
-  @media (min-width: 767px) and (max-width: 998px) {
-      .recipeTitle {
-          font-size: 16px;
-      }
-          
-      .statsButtons {
-          width: 9px;
-          height: 9px;
-      }
-  
-      .stats{
-          font-size: 7px;
-          margin-left: 1px;
-      }
-      
-      .statsButtons-container a{
-          margin-left: 1px; 
-      }
-  }
-  
-  @media (min-width: 665px) and (max-width: 767px) {
-      .recipeTitle {
-          font-size: 25px;
-      }
-          
-      .statsButtons {
-          width: 20px;
-          height: 20px;
-      }
-      
-      .stats{
-          font-size: 14px;
-          margin-left: 2px;
-      }
-      
-      .statsButtons-container a{
-          margin-left: 4px; 
-      }
-  }
-  
-  @media (min-width: 518px) and (max-width: 665px) {
-      .recipeTitle {
-          font-size: 20px;
-      }
-  
-      .statsButtons {
-          width: 14px;
-          height: 14px;
-      }
-  
-      .stats {
-          font-size: 10px;
-          margin-left: 1px;
-      }
-  
-      .statsButtons-container a {
-          margin-left: 2px;
-      }
-  }
-  
-  @media (min-width: 470px) and (max-width: 518px) {
-      .recipeTitle {
-          font-size: 20px;
-      }
-  
-      .statsButtons {
-          width: 12px;
-          height: 12px;
-      }
-  
-      .stats {
-          font-size: 8px;
-          margin-left: 1px;
-      }
-  
-      .statsButtons-container a {
-          margin-left: 2px;
-      }
-  }
-  
-  @media (min-width: 0px) and (max-width: 470px) {
-      .recipeTitle {
-          font-size: 20px;
-      }
-  
-      .recipeIconsWindow {
-          display: none;
-      }
-  }
-  
-  .recipesShowModal {
-      position: absolute;
-      top: 0;
-      margin-top: 95px;
-      margin-left: 20%;
-      
-      border-radius: 15px;
-      background-color: rgba(0, 0, 0, 0.7);
-      
-      display: none;
-      width: 60%;
-      height: 85%;
-      
-      overflow: hidden;
-    
-  }
-  
-  .recipesShowModal h2 {
-     text-align: center;
-     color: white;
-     font-family: Verdana, Geneva, Tahoma, sans-serif;
-     font-size: 20px;
-     
-     text-decoration: none;
-  }
-  
-  /* Recipe visualization styles and mediaQuery - end */
-  
-  /* CommentaryBox styles - start */
-  
-    .rowWindow {
-        width: 100%;
-        height: 100%;
-        margin-top: 35px;
-        
-        overflow: hidden; 
-    }
-  
-    .commentSlide {
-        position: absolute;
-        top: 10%;
-        /* left: 67%; */
-        left: 100%;
-        
-    transition: 0.5s;
+}
 
-        border-radius: 20px;
-        background-color: rgba(0, 0, 0, 0.7);
-        
-        width: 30%;
-        height: 83%;
-        
-        display: none;
-        overflow: hidden;
+@media (max-width: 990px) {
+    .recipeTitle {
+        font-size: 25px;
     }
-  
-    .nameBox {
-        border: none;
-        outline: none;
-        box-shadow: none;
-        resize: none;
-  
-        border-bottom: solid 1px rgba(255, 255, 255, 0.2);
-        color: black;
-        padding: 10px;
-        
-        width: 80%;
-        height: 40px;
+    .statsButtons {
+        width: 25px;
+        height: 25px;
     }
-  
-    input:focus {
-        outline: none;
-        border-bottom: solid 1px cornflowerblue;
-        color: black;
+    .stats {
+        font-size: 14px;
     }
-  
-    .textFormat{
-        word-wrap: break-word;
-        color: white;
-    }
-  
-    .commentaryBox {
-        border: none;
-        outline: none;
-        box-shadow: 0 0px 1px 0 rgba(255, 255, 255, 0.2), 0 0px 1px 0 rgba(255, 255, 255, 0.2);
-        resize: none;
-        
-        color: black;
-        
-        padding: 10px;
-        border-radius: 2px;
-        margin-top: 5px;
-        
-        width: 80%;
-        height: 100px;
-    }
-  
-    textarea:focus {
-        outline: none;
-        border: solid 1px cornflowerblue;
-        color: black;
-    }
-  
-    .submitPost {
-        position: relative;
-        right: 10%;
-        top: 3px;
-        margin-bottom: 3px; 
+}
 
-        float: right;
-        
-        border: solid 1px #e7e7e7;
-        border-radius: 5px;
-        background-color: white;
-        color: black;
-        
-        text-decoration: none;
+@media (min-width: 1183px) and (max-width: 1318px) {
+    .recipeTitle {
+        font-size: 25px;
+    }
+    .statsButtons {
+        width: 18px;
+        height: 18px;
+    }
+    .stats {
+        font-size: 14px;
+        margin-left: 2px;
+    }
+    .statsButtons-container a {
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 998px) and (max-width: 1183px) {
+    .recipeTitle {
+        font-size: 23px;
+    }
+    .statsButtons {
+        width: 16px;
+        height: 16px;
+    }
+    .stats {
+        font-size: 11px;
+        margin-left: 1px;
+    }
+    .statsButtons-container a {
+        margin-left: 2px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 998px) {
+    .recipeTitle {
         font-size: 16px;
-        text-align: center;
-        
-        padding: 4px 16px;
-        transition-duration: 0.4s;
-  
-        cursor: pointer;
     }
-  
-    .submitPost:hover {
-        outline: none;
-        border: solid 1px cornflowerblue;
-        background-color: cornflowerblue;
-        color: white;
+    .statsButtons {
+        width: 9px;
+        height: 9px;
     }
-  
-    .newComment {
-        position: relative;
-        list-style-type: none;
-        
-        padding-left: 15%;
-        
-        width: 110%;
-        height: 500px;
-  
-        overflow: auto;
+    .stats {
+        font-size: 7px;
+        margin-left: 1px;
     }
-  
-    .newCommentBottomBorder {
-        padding-bottom: 5px;
-        margin-bottom: 25px;
-        width: 80%;
-        border-bottom: solid 1px rgba(231, 231, 231, 0.2);
+    .statsButtons-container a {
+        margin-left: 1px;
     }
-  
-    .dateAndTime {
-        color: cornflowerblue;
-    }
-  
-    .showComments {
-        position: absolute;
-        top: 35%;
-        left: 92%;
-  
-        display: none;
+}
 
-        background-color: rgba(255, 255, 255, 0.0);
-        border: solid 0px black;
-  
-        letter-spacing: 3px;
-        font-family: Verdana,Geneva,Tahoma,sans-serif;
-        font-size: 30px;
-        color: white;
-        
-  
-        transform: rotate(90deg);
-        transform-origin: left top 50 50;
+@media (min-width: 665px) and (max-width: 767px) {
+    .recipeTitle {
+        font-size: 25px;
     }
-  
-    .showComments:hover{
-      color:#e7e7e7 ;
+    .statsButtons {
+        width: 20px;
+        height: 20px;
     }
-  
-    /* commentaryBox styles - start */
+    .stats {
+        font-size: 14px;
+        margin-left: 2px;
+    }
+    .statsButtons-container a {
+        margin-left: 4px;
+    }
+}
+
+@media (min-width: 518px) and (max-width: 665px) {
+    .recipeTitle {
+        font-size: 20px;
+    }
+    .statsButtons {
+        width: 14px;
+        height: 14px;
+    }
+    .stats {
+        font-size: 10px;
+        margin-left: 1px;
+    }
+    .statsButtons-container a {
+        margin-left: 2px;
+    }
+}
+
+@media (min-width: 470px) and (max-width: 518px) {
+    .recipeTitle {
+        font-size: 20px;
+    }
+    .statsButtons {
+        width: 12px;
+        height: 12px;
+    }
+    .stats {
+        font-size: 8px;
+        margin-left: 1px;
+    }
+    .statsButtons-container a {
+        margin-left: 2px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 470px) {
+    .recipeTitle {
+        font-size: 20px;
+    }
+    .recipeIconsWindow {
+        display: none;
+    }
+}
+
+.recipesShowModal {
+    position: absolute;
+    top: 0;
+    margin-top: 95px;
+    margin-left: 20%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    width: 60%;
+    height: 85%;
+    overflow: hidden;
+}
+
+.recipesShowModal h2 {
+    text-align: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/* Recipe visualization styles and mediaQuery - end */
+
+/* CommentaryBox styles - start */
+
+.rowWindow {
+    width: 100%;
+    height: 100%;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.commentSlide {
+    position: absolute;
+    top: 10%;
+    /* left: 67%; */
+    left: 100%;
+    transition: 0.5s;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 30%;
+    height: 83%;
+    display: none;
+    overflow: hidden;
+}
+
+.nameBox {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    color: black;
+    padding: 10px;
+    width: 80%;
+    height: 40px;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: solid 1px cornflowerblue;
+    color: black;
+}
+
+.textFormat {
+    word-wrap: break-word;
+    color: white;
+}
+
+.commentaryBox {
+    border: none;
+    outline: none;
+    box-shadow: 0 0px 1px 0 rgba(255, 255, 255, 0.2), 0 0px 1px 0 rgba(255, 255, 255, 0.2);
+    resize: none;
+    color: black;
+    padding: 10px;
+    border-radius: 2px;
+    margin-top: 5px;
+    width: 80%;
+    height: 100px;
+}
+
+textarea:focus {
+    outline: none;
+    border: solid 1px cornflowerblue;
+    color: black;
+}
+
+.submitPost {
+    position: relative;
+    right: 10%;
+    top: 3px;
+    margin-bottom: 3px;
+    float: right;
+    border: solid 1px #e7e7e7;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+    padding: 4px 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.submitPost:hover {
+    outline: none;
+    border: solid 1px cornflowerblue;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.newComment {
+    position: relative;
+    list-style-type: none;
+    padding-left: 15%;
+    width: 110%;
+    height: 500px;
+    overflow: auto;
+}
+
+.newCommentBottomBorder {
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+    width: 80%;
+    border-bottom: solid 1px rgba(231, 231, 231, 0.2);
+}
+
+.dateAndTime {
+    color: cornflowerblue;
+}
+
+.showComments {
+    position: absolute;
+    top: 35%;
+    left: 92%;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.0);
+    border: solid 0px black;
+    letter-spacing: 3px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: white;
+    transform: rotate(90deg);
+    transform-origin: left top 50 50;
+}
+
+.showComments:hover {
+    color: #e7e7e7;
+}

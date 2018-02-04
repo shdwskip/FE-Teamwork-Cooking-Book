@@ -28,20 +28,21 @@
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
+                    $("#showRecipeCommentsBtn").css("display", "block");
                     if (commentsData) {
                         comments.displayComments();
                     }
                 }
             });
         }
-        
+
         var $commentButtonClicked = $("#showRecipeComments");
         var $commentWindow = $("#getSpammedComments");
-        
+
         var $mealInfoWindow = $("#meal-window");
-      
-        if($mealInfoWindow.css("display")==="block"){
-            $commentButtonClicked.css("display","block");
+
+        if ($mealInfoWindow.css("display") === "block") {
+            $commentButtonClicked.css("display", "block");
         }
 
         $(document).mouseup(function (e) {
@@ -50,26 +51,26 @@
             var buttonShow = $("#showRecipeComments");
 
             // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) 
-                && container.has(e.target).length === 0 
-                && !rightDiv.is(e.target) 
-                && rightDiv.has(e.target).length === 0
-                && !buttonShow.is(e.target) 
-                && buttonShow.has(e.target).length === 0
+            if (!container.is(e.target) &&
+                container.has(e.target).length === 0 &&
+                !rightDiv.is(e.target) &&
+                rightDiv.has(e.target).length === 0 &&
+                !buttonShow.is(e.target) &&
+                buttonShow.has(e.target).length === 0
             ) {
-            
-            
+
+
                 // console.log(this);
 
                 container.hide();
-                $commentButtonClicked.css("display","none");
+                $commentButtonClicked.css("display", "none");
                 $("#getSpammedComments").css("display", "none");
                 // menu button bug somewhere here !!!
-                
-                $("#commentWindow").css("display","none");
+
+                $("#commentWindow").css("display", "none");
                 menu.hideShowMenus();
                 $("#getSpammedComments").css("display", "none");
-                
+
                 // $("#side-menu").css("display", "block");
 
                 $(".commentSlide").css("left", "100%");
@@ -78,7 +79,7 @@
                 container.hide();
                 clearMealWindow();
             }
-            
+
         });
 
     }
@@ -141,13 +142,13 @@
     $('#back').on('click', function () {
         $('.meal-window').css('display', 'none');
         $('.recipesShowModal').css('display', 'block');
-        
+
         $("#showRecipeComments").css("display", "none");
-        if($("#commentWindow").css("display")==="none"){
-            $("#commentWindow").css("display","block");
+        if ($("#commentWindow").css("display") === "none") {
+            $("#commentWindow").css("display", "block");
             menu.hideShowMenus();
-        }else{
-            $("#commentWindow").css("display","none");
+        } else {
+            $("#commentWindow").css("display", "none");
             menu.hideShowMenus();
             $("#getSpammedComments").css("display", "none");
             $("#side-menu").css("display", "block");
