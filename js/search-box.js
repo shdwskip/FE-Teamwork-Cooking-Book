@@ -18,6 +18,9 @@ $(function () {
                     return;
                 }
             })
+            $('.ui-widget').css('display', 'none');
+            $('.search-box').val('');
+            modifyTitle.moveTitle();
             meal.visualizeMeal($mealId);
             category.loadFromStorage($mealCategory);
         }
