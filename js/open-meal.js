@@ -1,6 +1,7 @@
 (function (scope) {
     var visualizeMeal = function (recipeId) {
         var recipesData = JSON.parse(localStorage.getItem('allRecipes'));
+        var commentsData = JSON.parse(localStorage.getItem('allComments'));
         if ($('.meal-window').css('display') === 'none') {
 
             recipesData.forEach(function (recipe) {
@@ -27,6 +28,9 @@
                     $('#preparation').html(recipe.preparation);
                     $('#meal-pic').attr('src', recipe.picture);
                     $('.meal-window').css('display', 'block');
+                    if (commentsData) {
+                        comments.displayComments();
+                    }
                 }
             });
         }
@@ -89,6 +93,7 @@
         $('#preparation').html('');
         $('#ratingCounter').html('');
         $('#meal-pic').removeAttr('src');
+        comments.clearComments();
     }
 
     var $servingSVG = `<svg id="svg-serv" style="enable-background:new 0 0 24 24;" width="30px" height="30px" version="1.1" viewBox="0 0 24 24" xml:space="preserve"
