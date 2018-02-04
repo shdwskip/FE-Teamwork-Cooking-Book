@@ -2,8 +2,8 @@
     var visualizeMeal = function (recipeId) {
         var recipesData = JSON.parse(localStorage.getItem('allRecipes'));
         var commentsData = JSON.parse(localStorage.getItem('allComments'));
-        if ($('.meal-window').css('display') === 'none') {
 
+        if ($('.meal-window').css('display') === 'none') {
             recipesData.forEach(function (recipe) {
                 if (recipe.id === recipeId) {
                     $('#back').html($backButtonSVG);
@@ -34,54 +34,41 @@
                     }
                 }
             });
-        }
-
-        var $commentButtonClicked = $("#showRecipeComments");
-        var $commentWindow = $("#getSpammedComments");
-
-        var $mealInfoWindow = $("#meal-window");
-
-        if ($mealInfoWindow.css("display") === "block") {
-            $commentButtonClicked.css("display", "block");
-        }
+        }       
 
         $(document).mouseup(function (e) {
-            var container = $('#meal-window');
-            var rightDiv = $("#getSpammedComments");
-            var buttonShow = $("#showRecipeComments");
+            var mealDetailPanel = $('.meal-window');
+            var commentWindow = $("#getRecipeComments");
+            var commentButton = $("#showRecipeCommentsBtn");
 
-            // if the target of the click isn't the container nor a descendant of the container
-            if (!container.is(e.target) &&
-                container.has(e.target).length === 0 &&
-                !rightDiv.is(e.target) &&
-                rightDiv.has(e.target).length === 0 &&
-                !buttonShow.is(e.target) &&
-                buttonShow.has(e.target).length === 0
+            // we have 3 visible divs(meal details, comentary panel and commentary button)
+            // in case we click outside one of them - we have to close all
+            // so if event target isn't the meal details, as well as the comentary panel and button + all their nested childs
+            // a.k.a (if it was clicked outside of their bounds) - we do stuffs
+            if (!mealDetailPanel.is(e.target)
+                && mealDetailPanel.has(e.target).length === 0
+                && !commentWindow.is(e.target)
+                && commentWindow.has(e.target).length === 0
+                && !commentButton.is(e.target)
+                && commentButton.has(e.target).length === 0
             ) {
+                // hide meal details
+                mealDetailPanel.hide();
+              
+                //hide commentary panel
+                commentWindow.css("display", "none");
 
-
-                // console.log(this);
-
-                container.hide();
-                $commentButtonClicked.css("display", "none");
-                $("#getSpammedComments").css("display", "none");
-                // menu button bug somewhere here !!!
-
-                $("#commentWindow").css("display", "none");
-                menu.hideShowMenus();
-                $("#getSpammedComments").css("display", "none");
-
-                // $("#side-menu").css("display", "block");
-
-                $(".commentSlide").css("left", "100%");
-                $("#meal-window").css("margin-left", "");
-
-                container.hide();
+                //hide commentary button
+                commentButton.css("display", "none");
+              
+                //clear loaded data for the recipe
                 clearMealWindow();
+
+                //move meal details in its original position
+                mealDetailPanel.css("margin-left", "");
+
             }
-
         });
-
     }
 
     var clearMealWindow = function () {
@@ -129,7 +116,9 @@
         var $currentClicked = this.childNodes[1];
         var $id = $currentClicked.alt;
         $('.recipesShowModal').css('display', 'none');
-        $("#getSpammedComments").css("display", "none");
+        $("#showRecipeCommentsBtn").css("display", "block");
+
+        $("#side-menu").css("display","block");
 
         visualizeMeal($id);
     });
@@ -141,25 +130,13 @@
 
     $('#back').on('click', function () {
         $('.meal-window').css('display', 'none');
-        $('.recipesShowModal').css('display', 'block');
-
-        $("#showRecipeComments").css("display", "none");
-        if ($("#commentWindow").css("display") === "none") {
-            $("#commentWindow").css("display", "block");
-            menu.hideShowMenus();
-        } else {
-            $("#commentWindow").css("display", "none");
-            menu.hideShowMenus();
-            $("#getSpammedComments").css("display", "none");
-            $("#side-menu").css("display", "block");
-
-            $(".commentSlide").css("left", "100%");
-            $("#meal-window").css("margin-left", "");
-        }
+        $('.recipesShowModal').css('display', 'block');      
+        menu.hideShowMenusBack();
     })
 
     scope.meal = {
         visualizeMeal,
         clearMealWindow
     }
+
 })(window);
