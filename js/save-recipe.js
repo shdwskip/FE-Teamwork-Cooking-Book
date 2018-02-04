@@ -1,6 +1,4 @@
 (function (scope) {
-    // debugger;
-
     var saveRecipe = function ($category, $recipeName, $ingredients, $description, $imgURL) {
         var $allRecipes = localStorage.getItem('allRecipes') ? localStorage.getItem('allRecipes') : [];
 

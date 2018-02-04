@@ -1,8 +1,6 @@
 
    (function () {
     $("#calories").css("cursor", "pointer");
-    // debugger;
-    // change this code to listen when title or picture of meal is clicked
     $("#calories").click(function(){
         var $id = $('.meal-basics').attr('id');
         visualizeCalories($id);

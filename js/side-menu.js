@@ -26,6 +26,7 @@ $(function () {
     $(".title-container").css("top", "0");
     $(".title-container").css("margin-top", "1%");
     $(".title-container").css("justify-content", "center");
+    $(".search-icon").css("display", "block");
     $(".search-box").css("display", "none");
   }
   $(".menu li").click(function () {

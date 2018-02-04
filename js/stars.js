@@ -11,7 +11,6 @@
     var $recipesData = JSON.parse(localStorage.getItem('allRecipes'));
     $recipesData.forEach(function (recipe) {
       if (recipe.id === recipeId) {
-        debugger;
         recipe.totalRating = calculated;
         recipe.allRatings = allRatings;
         localStorage.setItem('allRecipes', JSON.stringify($recipesData));

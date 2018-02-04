@@ -15,7 +15,6 @@ $(function () {
                 if (recipe.name === $mealName) {
                     $mealId = recipe.id;
                     $mealCategory = recipe.category;
-                    return;
                 }
             })
             $('.ui-widget').css('display', 'none');
