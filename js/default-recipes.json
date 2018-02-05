@@ -1,7 +1,6 @@
 {
-    "defaultRecipes": [
-        {
-            
+    "defaultRecipes": [{
+
             "category": "Vegan",
             "name": "Roasted Brussels Sprouts",
             "ingredients": [
@@ -30,7 +29,7 @@
         },
 
         {
-            
+
             "category": "Meat",
             "name": "Meatballs Nirvana",
             "ingredients": [
@@ -59,7 +58,7 @@
         },
 
         {
-            
+
             "category": "Fish",
             "name": "Seared Ahi Tuna Steaks",
             "ingredients": [
@@ -87,7 +86,7 @@
         },
 
         {
-            
+
             "category": "Dessert",
             "name": "Too Much Chocolate Cake",
             "ingredients": [
@@ -111,6 +110,157 @@
             "time": "40min",
             "allRatings": [],
             "totalRating": 0
+        },
+
+        {
+            "category": "Vegan",
+            "name": "Vegan Pancakes",
+            "ingredients": [
+                "1 1/4 cups all-purpose flour", "2 tablespoons white sugar", "2 teaspoons baking powder", "1/2 teaspoon salt", "1 1/4 cups water", "1 tablespoon oil"
+            ],
+            "preparation": "Sift the flour, sugar, baking powder, and salt into a large bowl. Whisk the water and oil together in a small bowl. Make a well in the center of the dry ingredients, and pour in the wet. Stir just until blended; mixture will be lumpy. Heat a lightly oiled griddle over medium-high heat. Drop batter by large spoonfuls onto the griddle, and cook until bubbles form and the edges are dry. Flip, and cook until browned on the other side. Repeat with remaining batter.",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/2682199.jpg",
+            "nutrition": {
+                "totalCalories": "200 kCal",
+                "fat": "48.6",
+                "saturatedFat": "12.8",
+                "cholesterol": "0",
+                "sodium": "550",
+                "totalCarbs": "60.9",
+                "fibyr": "2.4",
+                "sugar": "43.5",
+                "protein": "7.6"
+            },
+            "servings": 8,
+            "time": "30min",
+            "allRatings": [],
+            "totalRating": 0
+        },
+
+        {
+            "category": "Vegan",
+            "name": "Creamy Vegan Macaroni and Cheese",
+            "ingredients": [
+                "1 (8 ounce) package elbow macaroni", "2/3 cup rice bran oil", "2 cups unsweetened soy milk", "1 cup nutritional yeast", "4 cloves garlic - minced", "2 teaspoons yellow mustard", "1 teaspoon ground paprika"
+            ],
+            "preparation": "Preheat oven to 375 degrees F (190 degrees C). Grease an 8-inch baking dish. Bring a large pot of lightly salted water to a boil. Cook elbow macaroni in the boiling water, stirring occasionally, until tender yet firm to the bite, about 8 minutes. Drain and transfer to a large bowl; toss with 1 tablespoon rice bran oil. Combine remaining rice bran oil, soy milk, nutritional yeast, garlic, mustard, and paprika in a high-powered food processor or blender; blend until smooth and creamy. Pour soy milk mixture over elbow macaroni in the bowl; toss to mix. Pour into the prepared baking dish. Cover with aluminum foil. Bake in the preheated oven until center is bubbling, about 20 minutes.",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/4448867.jpg",
+            "nutrition": {
+                "totalCalories": "300 kCal",
+                "fat": "48.6",
+                "saturatedFat": "12.8",
+                "cholesterol": "0",
+                "sodium": "432",
+                "totalCarbs": "76.9",
+                "fibyr": "24.4",
+                "sugar": "10.5",
+                "protein": "17.6"
+            },
+            "servings": 4,
+            "time": "45min",
+            "allRatings": [],
+            "totalRating": 0
+        },
+
+        {
+            "category": "Dessert",
+            "name": "Mary's Cheesecake",
+            "ingredients": [
+                "2 1/2 cups graham cracker crumbs", "1/4 cup white sugar", "1/2 cup margarine - softened", "4 (8 ounce) packages cream cheese", "1 1/2 cups white sugar", "1 pint heavy cream", "2 tablespoons all-purpose flour", "7 eggs", "2 teaspoons lemon juice", "2 teaspoons vanilla extract"
+            ],
+            "preparation": "Preheat oven to 350 degrees F (175 degrees C). In a medium bowl, mix graham cracker crumbs, 1/4 cup sugar and margarine until well blended . Press mixture into a 9 inch springform pan. In a large bowl, beat cream cheese with sugar until smooth. In a separate bowl, combine cream, flour, eggs, lemon juice and vanilla. Beat together, and then pour into cream cheese mixture. Mix well. Pour filling into prepared graham cracker crust. Bake in the preheated oven for 65 minutes. Turn off oven, and cool cake in oven for 30 minutes. Prop door open and cool in oven for an additional 30 minutes. R",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/5055605.jpg",
+            "nutrition": {
+                "totalCalories": "280 kCal",
+                "fat": "68.6",
+                "saturatedFat": "12.8",
+                "cholesterol": "5",
+                "sodium": "432",
+                "totalCarbs": "76.9",
+                "fibyr": "24.4",
+                "sugar": "40.5",
+                "protein": "17.6"
+            },
+            "servings": 12,
+            "time": "1h 10min",
+            "allRatings": [],
+            "totalRating": 0
+        },
+
+        {
+            "category": "Dessert",
+            "name": "Flourless Chocolate Cake",
+            "ingredients": [
+                "1/2 cup water", "1/4 teaspoon salt", "3/4 cup white sugar", "18 (1 ounce) squares bittersweet chocolate", "1 cup unsalted butter", "6 eggs"
+            ],
+            "preparation": "Preheat oven to 300 degrees F (150 degrees C). Grease one 10 inch round cake pan and set aside. In a small saucepan over medium heat combine the water, salt and sugar. Stir until completely dissolved and set aside. Either in the top half of a double boiler or in a microwave oven melt the bittersweet chocolate. Pour the chocolate into the bowl of an electric mixer. Cut the butter into pieces and beat the butter into the chocolate, 1 piece at a time. Beat in the hot sugar-water. Slowly beat in the eggs, one at a time. Pour the batter into the prepared pan. Have a pan larger than the cake pan ready, put the cake pan in the larger pan and fill the pan with boiling water halfway up the sides of the cake pan. Bake cake in the water bath at 300 degrees F (150 degrees C) for 45 minutes. The center will still look wet. Chill cake overnight in the pan. To unmold, dip the bottom of the cake pan in hot water for 10 seconds and invert onto a serving plate.",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/668993.jpg",
+            "nutrition": {
+                "totalCalories": "580 kCal",
+                "fat": "69",
+                "saturatedFat": "12.8",
+                "cholesterol": "5",
+                "sodium": "289",
+                "totalCarbs": "73.9",
+                "fibyr": "24.4",
+                "sugar": "46.7",
+                "protein": "22.6"
+            },
+            "servings": 9,
+            "time": "1h 20min",
+            "allRatings": [],
+            "totalRating": 0
+        },
+
+        {
+            "category": "Fish",
+            "name": "Paleo Pecan-Maple Salmon",
+            "ingredients": [
+                "4 (4 ounce) fillets salmon", "salt and ground black pepper to taste", "1/2 cup pecans", "3 tablespoons pure maple syrup", "1 tablespoon apple cider vinegar", "1 teaspoon smoked paprika", "1/2 teaspoon chipotle pepper powder", "1/2 teaspoon onion powder"
+            ],
+            "preparation": "Place salmon fillets on a baking sheet and season with salt and black pepper. Combine pecans, maple syrup, vinegar, paprika, chipotle powder, and onion powder in a food processor; pulse until texture is crumbly. Spoon pecan mixture on top of each salmon fillet, coating the entire top surface. Refrigerate coated salmon, uncovered, for 2 to 3 hours. Preheat oven to 425 degrees F (220 degrees C). Bake salmon in the preheated oven until fish flakes easily with a fork, 12 to 14 minutes.",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/2410943.jpg",
+            "nutrition": {
+                "totalCalories": "434 kCal",
+                "fat": "76",
+                "saturatedFat": "12.8",
+                "cholesterol": "2",
+                "sodium": "289",
+                "totalCarbs": "73.9",
+                "fibyr": "34.5",
+                "sugar": "46.7",
+                "protein": "45.6"
+            },
+            "servings": 2,
+            "time": "45min",
+            "allRatings": [],
+            "totalRating": 0
+        },
+
+        {
+            "category": "Meat",
+            "name": "Turkey Burgers",
+            "ingredients": [
+                "3 pounds ground turkey", "1/4 cup seasoned bread crumbs", "1/4 cup finely diced onion", "2 egg whites - lightly beaten", "1/4 cup chopped fresh parsley", "1 clove garlic, peeled and minced", "1 teaspoon salt", "1/4 teaspoon ground black pepper"
+            ],
+            "preparation": "In a large bowl, mix ground turkey, seasoned bread crumbs, onion, egg whites, parsley, garlic, salt, and pepper. Form into 12 patties. Cook the patties in a medium skillet over medium heat, turning once, to an internal temperature of 180 degrees F (85 degrees C).",
+            "picture": "http://images.media-allrecipes.com/userphotos/720x405/666133.jpg",
+            "nutrition": {
+                "totalCalories": "729 kCal",
+                "fat": "87",
+                "saturatedFat": "32.8",
+                "cholesterol": "10",
+                "sodium": "312",
+                "totalCarbs": "73.9",
+                "fibyr": "12.5",
+                "sugar": "9.7",
+                "protein": "33.6"
+            },
+            "servings": 4,
+            "time": "50min",
+            "allRatings": [],
+            "totalRating": 0
         }
+
     ]
 }
