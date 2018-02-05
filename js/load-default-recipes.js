@@ -1,6 +1,5 @@
 (function () {
     $.getJSON("js/default-recipes.json", function (data) {
-        debugger;
         data.defaultRecipes.forEach(function (obj) {
             obj.id = recipeControl.generateId();
         })

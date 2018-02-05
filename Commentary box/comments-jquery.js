@@ -24,7 +24,6 @@ var generateId = function () {
 }
 
 var addCommentToDom = function (date, user, comment) {
-    // debugger;
     var $commentBox = $('#all-comments');
     var $newCommentLi = $('<li>').addClass('newCommentBottomBorder');
     var $userName = $('<h4>');
@@ -43,7 +42,6 @@ var addCommentToDom = function (date, user, comment) {
 var commentsDatabase = localStorage.getItem('allComments') ? localStorage.getItem('allComments') : [];
 
 if (commentsDatabase.length > 0) {
-    // debugger;
     var data = JSON.parse(commentsDatabase);
     data.forEach((comment) => {
         var $date = comment.date;
