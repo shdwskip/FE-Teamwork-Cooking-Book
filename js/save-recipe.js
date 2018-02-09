@@ -1,6 +1,4 @@
-( function (scope) {
-    // debugger;
-    
+(function (scope) {
     var saveRecipe = function ($category, $recipeName, $ingredients, $description, $imgURL) {
         var $allRecipes = localStorage.getItem('allRecipes') ? localStorage.getItem('allRecipes') : [];
 
@@ -10,10 +8,12 @@
             name: $recipeName,
             ingredients: $ingredients,
             preparation: $description,
-            picture: $imgURL
+            picture: $imgURL,
+            allRatings: [],
+            totalRating: 0
         }
 
-        if (!Array.isArray($allRecipes)) {
+        if (typeof $allRecipes === 'string') {
             $allRecipes = JSON.parse($allRecipes);
         }
 
@@ -24,9 +24,9 @@
     var generateId = function () {
         return '_' + Math.random().toString(36).substr(2, 9);
     }
-    
-     scope.recipeControl = {
-         saveRecipe,
-         generateId
-     }
-} )(window);
+
+    scope.recipeControl = {
+        saveRecipe,
+        generateId
+    }
+})(window);
