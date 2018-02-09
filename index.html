@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>CooKingHub</title>
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script:700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Great+Vibes">
@@ -21,10 +23,33 @@
 </head>
 
 <body>
-
-    <header>
+    <header class="container-fluid">
 
         <div class="header row">
+            <div class="meals-menu col-xs-3">
+                <a id="nav-overlay">
+                    <svg class="menu-button" enable-background="new 0 0 24 24" height="80px" version="1.1" viewBox="0 0 24 24" width="80px" xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g>
+                            <path d="M0,23c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1v-1H0V23z" />
+                            <path d="M22,20h2c0-6.3-4.8-11.4-11-11.9V7h1c0.6,0,1-0.4,1-1s-0.4-1-1-1h-4C9.4,5,9,5.4,9,6s0.4,1,1,1h1v1.1C4.8,8.6,0,13.7,0,20   h2H22z M12,10c4.8,0,8.9,3.4,9.8,8H2.2C3.1,13.4,7.2,10,12,10z"
+                            />
+                            <path d="M16.5,12.2L16,13.1c1.5,0.9,2.7,2.2,3.4,3.8l0.9-0.4C19.6,14.7,18.2,13.2,16.5,12.2z" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+
+            <div class="title-search col-xs-6">
+                <div class="title-container text-center">
+                    <a href="index.html" id="title" class="title-anchor">CooKingHub</a>
+                </div>
+
+                <div class="search-container center-block">
+                    <input id="search" class="search-box" type="search" placeholder="Find your recipe..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Find your recipe...'">
+                </div>
+            </div>
+
             <div class="social-container col-xs-3">
                 <a id="contact" class="concacts">
                     <svg class="social-buttons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="34px"
@@ -35,7 +60,6 @@
                             />
                         </g>
                     </svg>
-
 
                 </a>
 
@@ -49,6 +73,7 @@
                         </g>
                     </svg>
                 </a>
+
                 <a href="#">
                     <svg class="social-buttons" height="32px" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px"
                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -56,6 +81,7 @@
                             style="fill-rule:evenodd;clip-rule:evenodd;" />
                     </svg>
                 </a>
+
                 <a href="#">
                     <svg class="social-buttons" height="32px" style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px"
                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -64,301 +90,257 @@
                     </svg>
                 </a>
             </div>
-
-            <div class="meals-menu col-xs-3">
-
-                <a id="nav-overlay">
-                    <svg class="menu-button" enable-background="new 0 0 24 24" height="80px" version="1.1" viewBox="0 0 24 24" width="80px" xml:space="preserve"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g>
-                            <path d="M0,23c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1v-1H0V23z" />
-                            <path d="M22,20h2c0-6.3-4.8-11.4-11-11.9V7h1c0.6,0,1-0.4,1-1s-0.4-1-1-1h-4C9.4,5,9,5.4,9,6s0.4,1,1,1h1v1.1C4.8,8.6,0,13.7,0,20   h2H22z M12,10c4.8,0,8.9,3.4,9.8,8H2.2C3.1,13.4,7.2,10,12,10z"
-                            />
-                            <path d="M16.5,12.2L16,13.1c1.5,0.9,2.7,2.2,3.4,3.8l0.9-0.4C19.6,14.7,18.2,13.2,16.5,12.2z" />
-                        </g>
-                    </svg>
-                </a>
-
-                <div id="side-menu" class="sidenav">
-
-                    <div class="menu">
-                        <li>
-                            <a id="showMeat">Meat</a>
-                        </li>
-                        <li>
-                            <a id="showFish">Fish</a>
-
-                        </li>
-                        <li>
-                            <a id="showVegan">Vegan</a>
-                        </li>
-                        <li>
-                            <a id="showDessert">Dessert</a>
-                        </li>
-
-                    </div>
-
-                    <div class="addRecipeBtn">
-                        <button class="recipeButton btn btn-success" type="button" id="add-recipe">ADD RECIPE</button>
-
-                    </div>
-
-                </div>
-            </div>
         </div>
 
     </header>
-    <div class="concactInfo">
-        <h2>Contact Us</h2>
 
-        <div class="persons">
-            <ul>
-                <h3 class="name">
-                    Pavel Denev
-                </h3>
-                <li>
-                    <img src="pictures/pavel.png">
+    <div class="mainContent container-fluid">
+        <div class="allContent row">
 
-                </li>
-                <li>
-                    <a>denev.pavel@gmail.com</a>
-                </li>
-            </ul>
-            <ul>
-                <h3 class="name">
-                    Dobromir Topalov
-                </h3>
-                <li>
-                    <img src="pictures/dobri.png">
-                </li>
-                <li>
-                    <a>dobritopalov@gmail.com</a>
-                </li>
-            </ul>
-            <ul>
-                <h3 class="name">
-                    Emanuil Stoykov
-                </h3>
-                <li>
-                    <img src="pictures/emo.png">
-                </li>
-                <li>
-                    <a>emanuilstoykov@yahoo.com</a>
-                </li>
-            </ul>
-        </div>
+            <div id="side-menu" class="sidenav col-sm-4">
+                <div class="menu">
+                    <li>
+                        <a id="showMeat">Meat</a>
+                    </li>
+                    <li>
+                        <a id="showFish">Fish</a>
 
-    </div>
+                    </li>
+                    <li>
+                        <a id="showVegan">Vegan</a>
+                    </li>
+                    <li>
+                        <a id="showDessert">Dessert</a>
+                    </li>
+                </div>
 
-
-    <div class="title-search row">
-
-        <div class="title-container col-xs-12 col-lg-12 text-center">
-            <a href="index.html" id="title" class="title-anchor">CooKingHub</a>
-
-        <div class="search-icon col-xs-12">
-            <a href="index.html">
-                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32"
-                    width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <g transform="translate(576 192)">
-                        <path d="M-544.88-165.121l-7.342-7.342c-1.095,1.701-2.541,3.148-4.242,4.242l7.343,7.342c1.172,1.172,3.071,1.172,4.241,0   C-543.707-162.048-543.707-163.947-544.88-165.121z"
-                        />
-                        <path d="M-552-180c0-6.627-5.373-12-12-12s-12,5.373-12,12s5.373,12,12,12S-552-173.373-552-180z M-564-171c-4.964,0-9-4.036-9-9   c0-4.963,4.036-9,9-9c4.963,0,9,4.037,9,9C-555-175.036-559.037-171-564-171z"
-                        />
-                        <path d="M-571-180h2c0-2.757,2.242-5,5-5v-2C-567.86-187-571-183.858-571-180z" />
-                    </g>
-                </svg>
-            </a>
-        </div>
-        </div>
-
-        <div class="search-container col-xs-12 col-sm-12">
-            <input id="search" class="search-box" type="search" placeholder="Find your recipe..." onfocus="this.placeholder = ''" onblur="this.placeholder = 'Find your recipe...'">
-        </div>
-
-    </div>
-
-    <div class="recipesShowModal container">
-        <h2>Menu list of all recipes with the chosen category</h2>
-        <div class="rowBackground row">
-            <div id="recipeBox" class="outerBox"></div>
-        </div>
-    </div>
-
-    <!-- comments start -->
-
-
-    <button id="showRecipeCommentsBtn" class="showComments">Comments</button>
-
-    <div id="getRecipeComments" class="commentSlide">
-        <div class="row">
-
-            <div class="col-sm-12">
-                <div class="rowWindow">
-                    <input id="user" class="nameBox center-block" name="name" placeholder="Your name: "></input>
-                    <textarea id="comment-input" class="commentaryBox center-block" name="comment" placeholder="Write comment..."></textarea>
-                    <button id="post-button" class="submitPost" type="button">Post</button>
+                <div class="addRecipeBtn center-block">
+                    <button class="recipeButton btn btn-success" type="button" id="add-recipe">ADD RECIPE</button>
                 </div>
             </div>
 
-        </div>
+            <div class="concactInfo row">
+                <h2>Contact Us</h2>
 
-        <div class="row">
+                <div class="persons">
+                    <ul class="col-xs-12 col-md-4">
+                        <h3 class="name">
+                            Pavel Denev
+                        </h3>
 
-            <div class="col-sm-12">
-                <div class="rowWindow">
+                        <li>
+                            <img src="pictures/pavel.png">
 
-                    <ul id="all-comments" class="newComment">
-
+                        </li>
+                        <li>
+                            <a>denev.pavel@gmail.com</a>
+                        </li>
                     </ul>
-
+                    <ul class="col-xs-12 col-md-4">
+                        <h3 class="name">
+                            Dobromir Topalov
+                        </h3>
+                        <li>
+                            <img src="pictures/dobri.png">
+                        </li>
+                        <li>
+                            <a>dobritopalov@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="col-xs-12 col-md-4">
+                        <h3 class="name">
+                            Emanuil Stoykov
+                        </h3>
+                        <li>
+                            <img src="pictures/emo.png">
+                        </li>
+                        <li>
+                            <a>emanuilstoykov@yahoo.com</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
-        </div>
 
-    </div>
-    <!-- comments end -->
-
-    <div class="dialog">
-
-        <h2>Add Your Recipe</h2>
-        <div class="row">
-
-            <div class="col-xs-6 col-lg-6">
-
-                <select class="category-select form-control" required="required">
-                    <option id="default-category" selected="selected" disabled="disabled">Select Category</option>
-                    <option value="">Meat</option>
-                    <option value="">Fish</option>
-                    <option value="">Vegan</option>
-                    <option value="">Dessert</option>
-                </select>
-
-
-                <div class="recipe-name">
-                    <h4>Recipe Name</h4>
-                    <input placeholder="Recipe Name" type="text" class="form-control" value="" required="required" pattern="" title="">
+            <div class="recipesShowModal col-sm-7">
+                <p class="browseTitle">Delicious and Quick Recipes</p>
+                <div class="rowBackground row">
+                    <div id="recipeBox" class="outerBox"></div>
                 </div>
-
-                <div class="ingredients-container">
-                    <h4>Ingredients</h4>
-                    <textarea placeholder="Enter ingredients, separated by commas" class="form-control" rows="3" required="required"></textarea>
-                </div>
-
-                <div class="description-container">
-                    <h4>Preparation</h4>
-                    <textarea placeholder="Describe preparation steps" class="form-control" rows="3" required="required"></textarea>
-                </div>
-
-                <div class="img-url">
-                    <h4>Picture</h4>
-                    <input type="text" id="meal-img-url" class="form-control" placeholder="URL of the meal" value="" required="required">
-                </div>
-
-                <div class="save-close-recipe">
-                    <button id="save-recipe" class="btn btn-success" type="button">Save</button>
-                    <button id="close-add-recipe" type="button" class="btn btn-danger">Close</button>
-                </div>
-
             </div>
 
-            <div class="col-xs-6 col-lg-6">
-                <img id="preview" src="" width="100%" height="auto">
-            </div>
 
-        </div>
-    </div>
-
-    <div id="meal-window" class="meal-window">
-        <span id="back" class="meal-icons"></span>;
-
-        <div class="details row">
-
-            <div class="meal-basics col-xs-3 cols-sm-6 col-lg-12">
-                <span>
-                    <h2 id="meal-name"></h2>
-                </span>
-                <span id="servings" class="meal-icons"></span>
-                <span id="time" class="meal-icons"></span>
-                <span id="calories" class="meal-icons"></span>
-
-                <div id="myModal" class="modal">
-
-                    <!-- Modal content -->
-                    <div class="modal-content">
-                        <div class="modal-header">
-
-                            <h2>Nutritrional facts</h2>
+            <div id="getRecipeComments" class="commentSlide col-xs-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="rowWindow">
+                            <input id="user" class="nameBox center-block" name="name" placeholder="Your name: "></input>
+                            <textarea id="comment-input" class="commentaryBox center-block" name="comment" placeholder="Write comment..."></textarea>
+                            <button id="post-button" class="submitPost" type="button">Post</button>
                         </div>
-                        <div class="modal-body">
+                    </div>
+                </div>
 
-                            <div class="row">
-                                <div class="col-md-8">Total Fat</div>
-                                <div id="tfat" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Saturated Fat</div>
-                                <div id="sfat" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Cholesterol</div>
-                                <div id="chol" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Sodium</div>
-                                <div id="sod" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Total Carbohydrate</div>
-                                <div id="tcarbs" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Dietary Fiber</div>
-                                <div id="fib" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-8">Sugars</div>
-                                <div id="sug" class="col-md-4 offset-md-4"></div>
-                            </div>
-                            <div class="row row-last">
-                                <div class="col-md-8">Protein</div>
-                                <div id="pro" class="col-md-4 offset-md-4"></div>
-                            </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="rowWindow">
+
+                            <ul id="all-comments" class="newComment">
+
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+
+            <div class="dialog">
+                <h2>Add Your Recipe</h2>
+                <div class="row">
+                    <div class="col-xs-6 col-lg-6">
+
+                        <select class="category-select form-control" required="required">
+                            <option id="default-category" selected="selected" disabled="disabled">Select Category</option>
+                            <option value="">Meat</option>
+                            <option value="">Fish</option>
+                            <option value="">Vegan</option>
+                            <option value="">Dessert</option>
+                        </select>
+
+                        <div class="recipe-name">
+                            <h4>Recipe Name</h4>
+                            <input placeholder="Recipe Name" type="text" class="form-control" value="" required="required" pattern="" title="">
+                        </div>
+
+                        <div class="ingredients-container">
+                            <h4>Ingredients</h4>
+                            <textarea placeholder="Enter ingredients, separated by commas" class="form-control" rows="3" required="required"></textarea>
+                        </div>
+
+                        <div class="description-container">
+                            <h4>Preparation</h4>
+                            <textarea placeholder="Describe preparation steps" class="form-control" rows="3" required="required"></textarea>
+                        </div>
+
+                        <div class="img-url">
+                            <h4>Picture</h4>
+                            <input type="text" id="meal-img-url" class="form-control" placeholder="URL of the meal" value="" required="required">
+                        </div>
+
+                        <div class="save-close-recipe row">
+                            <button id="save-recipe" class="btn btn-success" type="button">Save</button>
+                            <button id="close-add-recipe" type="button" class="btn btn-danger">Close</button>
                         </div>
                     </div>
 
 
-                </div>
-
-                </span>
-                <div id="ratingStar" class="rStar">
-                    <img id="rating" src="pictures/star.jpg">
-                    <span id="ratingCounter"></span>
-                    <div id="stars" class="displayStars"></div>
+                    <div class="col-xs-6 col-lg-6">
+                        <img id="preview" src="" width="100%" height="auto">
+                    </div>
 
                 </div>
             </div>
-        </div>
 
-        <div class="ingredients-container row">
-            <div class="ingredients col-xs-9">
-                <span id="ingrids"></span>
-            </div>
-        </div>
 
-        <div class="pic-n-prepare row">
-            <div class="prepare col-xs-6">
-                <p id="preparation"></p>
-            </div>
-            <div class="picture col-xs-3">
-                <img id="meal-pic">
-            </div>
-        </div>
+            <div id="meal-window" class="meal-window col-sm-7">
+                <span id="back" class="meal-icons"></span>;
 
+                <div class="details row">
+                    <div class="meal-basics">
+                        <div class="col-xs-12">
+                            <span>
+                                <h2 id="meal-name"></h2>
+                            </span>
+                        </div>
+
+                        <div class="col-xs-12">
+                            <span id="servings" class="meal-icons"></span>
+                            <span id="time" class="meal-icons"></span>
+                            <span id="calories" class="meal-icons"></span>
+                        </div>
+
+                        <div id="myModal" class="modal col-xs-12">
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+                                    <h2>Nutritrional facts</h2>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="row">
+                                        <div class="col-md-8">Total Fat</div>
+                                        <div id="tfat" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Saturated Fat</div>
+                                        <div id="sfat" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Cholesterol</div>
+                                        <div id="chol" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Sodium</div>
+                                        <div id="sod" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Total Carbohydrate</div>
+                                        <div id="tcarbs" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Dietary Fiber</div>
+                                        <div id="fib" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">Sugars</div>
+                                        <div id="sug" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                    <div class="row row-last">
+                                        <div class="col-md-8">Protein</div>
+                                        <div id="pro" class="col-md-4 offset-md-4"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="ratingStar" class="rStar col-xs-12">
+                            <img id="rating" src="pictures/star.jpg" title="Rate recipe!">
+                            <span id="ratingCounter"></span>
+                            <div id="stars" class="displayStars"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="ingredients col-xs-12">
+                        <span id="ingrids"></span>
+                    </div>
+                </div>
+
+                <div class="pic-n-prepare row">
+                    <div id="smallScreens" class="prepare col-xs-6">
+                        <p id="preparation"></p>
+                    </div>
+                    <div id="removeFromScreen" class="picture col-xs-5">
+                        <img id="meal-pic">
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="popComments col-sm-1">
+                <button id="showRecipeCommentsBtn" class="showComments">Comments</button>
+            </div>
+
+            <!-- end of content -->
+        </div>
     </div>
 
-    <footer>
+    <footer class="endOfContent">
         <p>&#169 Dope Chefs</p>
     </footer>
 
@@ -367,6 +349,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="js/smallScreenImages.js"></script>
+    <script src="js/moveTitle.js"></script>
     <script src="js/side-menu.js"></script>
     <script src="js/save-recipe.js"></script>
     <script src="js/load-default-recipes.js"></script>
@@ -381,6 +366,7 @@
     <script src="js/caloriesButton.js"></script>
     <script src="js/search-box.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/jquery-media-devices.js"></script>
 
 </body>
 

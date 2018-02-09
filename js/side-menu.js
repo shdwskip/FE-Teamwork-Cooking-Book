@@ -1,5 +1,4 @@
 $(function () {
-
   $(document).mouseup(function(e) {  
   
     var container = $("#side-menu");   
@@ -20,20 +19,11 @@ $(function () {
     } 
   });
   
-  var moveTitle = function () {
-    $("#title").css("font-size", "3vmax");
-    $(".title-container").css("position", "fixed");
-    $(".title-container").css("top", "0");
-    $(".title-container").css("margin-top", "1%");
-    $(".title-container").css("justify-content", "center");
-    $(".search-icon").css("display", "block");
-    $(".search-box").css("display", "none");
-  }
   $(".menu li").click(function () {
     moveTitle();
 
-
   });
+
   $(".addRecipeBtn").click(function () {
     moveTitle();
 
@@ -41,5 +31,3 @@ $(function () {
 
   window.modifyTitle = {moveTitle};
 });
-
-

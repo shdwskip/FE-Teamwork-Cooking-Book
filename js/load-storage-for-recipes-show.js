@@ -1,9 +1,10 @@
 /* eslint-disable*/
 
-
 (function (scope) {
-
   var loadFromStorage = function (category) {
+    $("#recipeBox").empty();
+    $("#recipeBox").scrollTop();
+
     var storage = JSON.parse(localStorage.getItem("allRecipes"));
 
     var $timeIcon = `<svg class="statsButtons" enable-background="new 0 0 24 24" height="26px" id="Layer_1" version="1.1" viewBox="0 0 24 24" width="26px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><path clip-rule="evenodd" d="M12,0C5.375,0,0.003,5.373,0.003,12c0,6.627,5.372,12,11.997,12    c6.626,0,11.997-5.373,11.997-12C23.997,5.373,18.626,0,12,0z M16.412,16.709l-0.35,0.35c-0.291,0.291-0.782,0.305-1.088,0.029    l-4.52-3.955c-0.308-0.275-0.541-0.838-0.521-1.25l0.419-7.134C10.374,4.336,10.729,4,11.142,4h0.493    c0.413,0,0.767,0.336,0.787,0.748l0.343,5.934c0.021,0.413,0.262,1,0.535,1.309l3.144,3.628    C16.717,15.928,16.704,16.418,16.412,16.709z" fill-rule="evenodd"/></g></g></svg>`
@@ -19,17 +20,18 @@
         var picture = recipe.picture;
         var specialId = recipe.id;
 
-        var time = null;
+        var time = "N/A";
+
         if (recipe.time) {
           time = recipe.time;
         }
 
-        var servings = null;
+        var servings = "N/A";
         if (recipe.servings) {
           servings = recipe.servings + " portions";
         }
 
-        var nutrition = null;
+        var nutrition = "N/A";
         var allNutrition = null;
         if (recipe.nutrition) {
           nutrition = recipe.nutrition.totalCalories;
@@ -129,7 +131,6 @@
 
     $(".recipesShowModal").css("display", "block");
 
-    $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
 
@@ -138,7 +139,6 @@
 
     $(".recipesShowModal").css("display", "block");
 
-    $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
 
@@ -147,7 +147,6 @@
 
     $(".recipesShowModal").css("display", "block");
 
-    $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
 
@@ -155,12 +154,12 @@
     var categoryMeal = $fromMenuDessert.html();
 
     $(".recipesShowModal").css("display", "block");
-    $("#recipeBox").html("");
     loadFromStorage(categoryMeal);
   })
 
   $(document).mouseup(function (e) {
     var container = $('.recipesShowModal');
+
 
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       container.hide();
@@ -173,32 +172,3 @@
   };
   
 })(window);
-
-
-
-
-/*
-{\"id\":\"_ksggthgfk\",\"category\":\"Vegan\",\"name\":\"Roasted Brussels Sprouts\",\"ingredients\":[\"1 1/2 pounds Brussels sprouts, ends trimmed and yellow leaves removed\",\"1 teaspoon kosher salt\",\"3 tablespoons olive oil\",\"1/2 teaspoon freshly ground black pepper\"],\"preparation\":\"Preheat oven to 400 degrees F (205 degrees C).\\n Place trimmed Brussels sprouts, olive oil, kosher salt, and pepper in a large resealable plastic bag. Seal tightly, and shake to coat. Pour onto a baking sheet, and place on center oven rack.\\n Roast in the preheated oven for 30 to 45 minutes, shaking pan every 5 to 7 minutes for even browning. Reduce heat when necessary to prevent burning. Brussels sprouts should be darkest brown, almost black, when done. Adjust seasoning with kosher salt, if necessary. Serve immediately.\",\"picture\":\"http://images.media-allrecipes.com/userphotos/720x405/812447.jpg\",\"nutrition\":{\"fat\":\"54.6\",\"saturatedFat\":\"5.8\",\"cholesterol\":\"79\",\"sodium\":\"241\",\"totalCarbs\":\"82\",\"fibyr\":\"7.4\",\"sugar\":\"0.5\",\"protein\":\"19.6\"},\"servings\":3,\"time\":\"55min\"}
-*/
-
-
-
-/*
-var $buttonIcon1 = $("<svg>").addClass("statsButtons");
-
-var $buttonIcon1 = $("<svg>").addClass("statsButtons");
-      $buttonIcon1.attr("height","32px")
-        .attr("style","enable-background:new 0 0 67 67;")
-        .attr("version","1.1")
-        .attr("viewBox","0 0 67 67")
-        .attr("width","32px")
-        .attr("xml:space","preserve")
-        .attr("xmlns","http://www.w3.org/2000/svg")
-        .attr("xmlns:xlink","http://www.w3.org/1999/xlink");
-      var $path1 = $("<path>");
-      $path1.attr("d","M49.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H49.837z M21.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H21.959z M33,64  C16.432,64,3,50.568,3,34C3,17.431,16.432,4,33,4s30,13.431,30,30C63,50.568,49.568,64,33,64z M25.354,48.137V27.71h-6.789v20.427  H25.354z")
-            .attr("style","fill-rule:evenodd;clip-rule:evenodd;");
-          
-      $buttonIcon1.append($path1);
-
-*/

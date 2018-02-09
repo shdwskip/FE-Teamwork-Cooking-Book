@@ -1,17 +1,9 @@
 $(function () {
-
   $("#ratingStar").click(function () {
       $("#stars").toggle();
 
   });
 
-  // $(document).mouseover(function (e) {
-  //   var container = $("#stars");
-  //   if (!container.is(e.target) && container.has(e.target).length === 0) {
-  //     $("#stars").css("display", "none");
-  //   }
-  // });
-  
   var sum = 0;
   var $totalRating = 0;
 
@@ -44,8 +36,5 @@ $(function () {
     stars.setRating($currentId, $totalRating, $ratings);
 
   });
-
-
-  // $("#stars").rateYo(); not needed
 
 });
