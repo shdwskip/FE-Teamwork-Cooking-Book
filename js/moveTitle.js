@@ -23,9 +23,13 @@ $(function($) {
       $(".title-container").css("margin-top", "-5%");
     }
 
-    if ($('body').width() > 425 && $('body').width() < 1024) {
+    if ($('body').width() > 425 && $('body').width() < 770) {
       $("#title").css("font-size", "6vmax");
       $(".title-container").css("margin-top", "-3%");
+    }
+    if ($('body').width() > 770 && $('body').width() < 1024) {
+      $("#title").css("font-size", "6vmax");
+      $(".title-container").css("margin-top", "-12%");
     }
 
     if ($('body').width() > 1025) {
