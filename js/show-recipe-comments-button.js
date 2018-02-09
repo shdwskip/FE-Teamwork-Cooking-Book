@@ -34,6 +34,10 @@
       $mealDetailsWindow.css("margin-left", "1%");
 
       $commentButton.css("margin-left", "450%");
+      if ($('body').width() > 1441){
+        $commentButton.css("margin-left", "430%");
+      }
+
       $sideMenuWindow.css("display", "none");
 
     } else {
