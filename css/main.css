@@ -129,6 +129,12 @@ body {
 
 }
 
+.ui-widget li:hover {
+    color: black;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 1)
+}
+
 .search-box::placeholder {
     color: white;
 }
