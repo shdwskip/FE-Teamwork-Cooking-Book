@@ -31,5 +31,3 @@ $(function () {
 
   window.modifyTitle = {moveTitle};
 });
-
-

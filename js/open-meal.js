@@ -61,6 +61,7 @@
                 //hide commentary button
                 commentButton.css("display", "none");
                 commentButton.css("margin-left", "-70px");
+
               
                 //clear loaded data for the recipe
                 clearMealWindow();

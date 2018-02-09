@@ -29,7 +29,6 @@
         },
 
         {
-
             "category": "Meat",
             "name": "Meatballs Nirvana",
             "ingredients": [
@@ -58,7 +57,6 @@
         },
 
         {
-
             "category": "Fish",
             "name": "Seared Ahi Tuna Steaks",
             "ingredients": [
@@ -86,7 +84,6 @@
         },
 
         {
-
             "category": "Dessert",
             "name": "Too Much Chocolate Cake",
             "ingredients": [
@@ -110,6 +107,7 @@
             "time": "40min",
             "allRatings": [],
             "totalRating": 0
+
         },
 
         {
@@ -818,6 +816,7 @@
             "time": "9h",
             "allRatings": [],
             "totalRating": 0
+
         }
     ]
 }
