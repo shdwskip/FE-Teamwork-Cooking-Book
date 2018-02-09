@@ -60,6 +60,7 @@
 
                 //hide commentary button
                 commentButton.css("display", "none");
+                commentButton.css("margin-left", "-70px");
               
                 //clear loaded data for the recipe
                 clearMealWindow();
@@ -120,6 +121,10 @@
 
         $("#side-menu").css("display","block");
 
+        if ($('body').width() > 770) {
+            $(".picture").css("height","35%");
+        }
+        
         visualizeMeal($id);
     });
 

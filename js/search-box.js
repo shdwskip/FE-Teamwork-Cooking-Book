@@ -29,6 +29,10 @@ $(function () {
                 $("#meal-window").css("margin-left","0px");                
             }
 
+            if ($('body').width() > 770) {
+                $(".picture").css("height","35%");
+            }
+
             category.loadFromStorage($mealCategory);
         }
     });
