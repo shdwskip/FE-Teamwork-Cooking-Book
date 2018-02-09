@@ -2486,29 +2486,34 @@ textarea:focus {
 
 
 @media (min-width: 1441px) and (max-width: 2561px) {
+    .title-anchor {
+        font-size: 5vmax;
+    }
+
     .social-buttons {
-        width: 12vmin;
+        width: 8vmin;
     }
 
     .menu-button {
         width: 45vmin;
+        padding-right: 62%;
     }
 
     .search-box {
-        font-size: 40px;
-        width: 50%;
-        height: 50px;
+        font-size: 18px;
+        width: 35%;
+        height: 25px;
         
     }
     
     .search-box:focus {
         color: white;
-        width: 85%;
+        width: 60%;
         border-radius: 14px;
     }
 
     .ui-widget {
-        font-size: 40px;
+        font-size: 18px;
     }
       
     .menu li {
@@ -2521,7 +2526,7 @@ textarea:focus {
     
     .sidenav a {
         padding: 3px;
-        font-size: 35px; 
+        font-size: 25px; 
     }
 
     .addRecipeBtn{
@@ -2534,7 +2539,7 @@ textarea:focus {
     }
 
     .browseTitle{
-        font-size: 2.5vmax;
+        font-size: 2vmax;
     }
 
     .meal-window {
@@ -2543,8 +2548,8 @@ textarea:focus {
     
     .meal-icons svg {
         margin-right: 9px;
-        height: 40px;
-        width: 40px;
+        height: 30px;
+        width: 30px;
     }
 
     .displayStars {
@@ -2553,27 +2558,27 @@ textarea:focus {
     }
     
     #meal-name{
-        font-size: 45px;
+        font-size: 35px;
     }
     
     #servings{
-        font-size: 25px; 
+        font-size: 20px; 
     }
     
     #time{
-        font-size: 25px; 
+        font-size: 20px; 
     }
     
     #calories{
-        font-size: 25px; 
+        font-size: 20px; 
     }
     
     #ingrids{
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .pic-n-prepare {
-        top: 30%;
+        top: 21%;
         left: 0;
      
         height: 100%;
@@ -2583,15 +2588,15 @@ textarea:focus {
         color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         
-        font-size: 28px;
+        font-size: 22px;
         margin-left: 5%;
         height: 38%;
         
     }
 
     .ingredients {
-        font-size: 28px;
-        top: 75%;
+        font-size: 22px;
+        top: 65%;
         margin-left: 13%;
         width: 80%;
     
@@ -2611,30 +2616,30 @@ textarea:focus {
     }
 
     .showComments {
-        font-size: 35px;
+        font-size: 25px;
     }
   
     .nameBox {
-        font-size: 25px; 
+        font-size: 18px; 
     }
 
     .textFormat h4{
-        font-size: 45px;
+        font-size: 25px;
     }
   
     .commentaryBox {
         
-        font-size: 25px; 
+        font-size: 18px; 
     }
   
     .submitPost {
-        font-size: 25px;
+        font-size: 20px;
     }
   
     .newComment {
         position: relative;
         list-style-type: none;
-        font-size: 35px;      
+        font-size: 20px;      
         padding-left: 15%;
         
         width: 110%;
@@ -2673,8 +2678,8 @@ textarea:focus {
     .dialog {
         top: 48%;
      
-        height: 980px;
-        width: 1400px;
+        height: 900px;
+        width: 1000px;
      }
 
     .save-close-recipe {
@@ -2684,21 +2689,21 @@ textarea:focus {
     }    
     
     .dialog h2 {
-        font-size: 38px;
+        font-size: 20px;
         margin-bottom: 5px;
     }
     
     .dialog h4 {
-        font-size: 36px;
+        font-size: 17px;
         margin-bottom: 10px;
     }
 
     .concactInfo {
         
-        margin-top: 0%;
+        margin-top: -10%;
         margin-left: 1%; 
-        width: 80%;
-        height: 650px;
+        width: 70%;
+        height: 550px;
         
         border-radius: 15px;
         padding: 10px;
@@ -2706,13 +2711,13 @@ textarea:focus {
     }
     
     .concactInfo h2 {
-        font-size: 38px;
+        font-size: 20px;
         margin-bottom: 30px;
     
     }
     
     .concactInfo h3 {
-        font-size: 32px;
+        font-size: 17px;
         margin-top: 10px;
     
     }
@@ -2724,13 +2729,13 @@ textarea:focus {
     }
     
     .persons img {
-      width: 400px;
-      height: 400px;
+      width: 300px;
+      height: 300px;
       border-radius: 5%;
     }
     
     .persons a {
-        font-size: 24px;
+        font-size: 15px;
         
     }
     
